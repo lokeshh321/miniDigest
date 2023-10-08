@@ -3,15 +3,13 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBvt97dhWfAarZ48P-OpSr2YFHI1nlPwv8',
-  authDomain: 'sc2006-project-4695d.firebaseapp.com',
-  databaseURL:
-    'https://sc2006-project-4695d-default-rtdb.asia-southeast1.firebasedatabase.app',
-  projectId: 'sc2006-project-4695d',
-  storageBucket: 'sc2006-project-4695d.appspot.com',
-  messagingSenderId: '693087631535',
-  appId: '1:693087631535:web:15d8e23d6b9395064abc5a',
-  measurementId: 'G-HWX5DH1JH1',
+  apiKey: import.meta.env.FIREBASE_API_KEY,
+  authDomain: import.meta.env.FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.FIREBASE_APP_ID,
+  measurementId: import.meta.env.FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
