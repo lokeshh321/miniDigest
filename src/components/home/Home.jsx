@@ -1,7 +1,12 @@
-import React from "react";
+import { Container } from '@mui/material';
+import React from 'react';
 
-function Home() {
-  return <div>Home Page</div>;
+import PreferenceBar from './PreferenceBar';
+
+export default function Home() {
+  return (
+    <Container>
+      <PreferenceBar />
+    </Container>
+  );
 }
-
-export default Home;
