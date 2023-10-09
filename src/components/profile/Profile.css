@@ -1,0 +1,164 @@
+/* Profile.css */
+
+/* Style the container */
+
+
+.profile-container {
+    display: flex;
+    justify-content: space-between; /* To create space between the profile picture and user info/buttons */
+    align-items: flex-start; /* Align items to the top */
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  
+  /* Style the profile picture */
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+  }
+  
+  /* Style the "Update Profile Icon" button */
+  .update-profile-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+  }
+  
+  .update-profile-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style the profile info textfields to stack vertically */
+  .profile-info-textfields .MuiTextField-root {
+    margin-bottom: 16px;
+  }
+
+  
+
+  
+  /* Style the buttons container */
+  .buttons-container {
+    display: flex;
+    justify-content: space-between; /* Create space between the "Update Particulars" and "Reset Password" buttons */
+    align-items: center; /* Vertically align buttons */
+    margin-top: 16px; /* Add margin to separate buttons from user info */
+  }
+  
+  
+  /* Style the "Update Particulars" and "Reset Password" buttons */
+  .update-particulars-button,
+  .reset-password-button {
+    flex: 1; /* Distribute available space equally between buttons */
+    margin-right: 10px; /* Add margin to create space between buttons */
+  }
+  
+  /* Add responsive styles */
+  @media (max-width: 768px) {
+    .profile-container {
+      flex-direction: column;
+      align-items: center; /* Center items vertically when in mobile view */
+    }
+  
+    .profile-picture img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .buttons-container {
+      flex-direction: column; /* Stack buttons vertically in mobile view */
+      align-items: center; /* Center buttons horizontally in mobile view */
+    }
+  
+    .update-particulars-button,
+    .reset-password-button {
+      margin-right: 0; /* Remove margin between buttons in mobile view */
+      margin-bottom: 10px; /* Add margin to separate buttons vertically in mobile view */
+    }
+  }
+
+  
+  /* Optional: Add a border radius to make it rounded */
+  .stylish-text-container {
+    border-radius: 8px;
+  }
+  
+  /* Optional: Add a box shadow for a subtle depth effect */
+  .stylish-text-container {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Stylish text container styles (as previously provided) */
+.stylish-text-container {
+    background-color: #10023c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family:cursive;
+    position: relative; /* Position for absolute snowflakes */
+    overflow: hidden; /* Hide overflow to keep snowflakes within the container */
+  }
+  
+  /* Stylish text styles */
+  .stylish-text {
+    margin-bottom: 20px; /* Add some margin for spacing between text and snowflakes */
+  }
+  
+  /* Snowflakes container */
+  .snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Snowflakes should not interfere with content */
+  }
+  
+  /* Individual snowflake styles */
+  .snowflake {
+    font-size: 20px;
+    line-height: 1;
+    opacity: 0.7;
+    position: absolute;
+    animation: fall 15s linear infinite; /* Animation for falling snowflakes */
+  }
+  
+  /* Keyframes for snowflake animation */
+  @keyframes fall {
+    0% {
+      transform: translateY(-5%);
+    }
+    100% {
+      transform: translateY(400%);
+    }
+  }
+
+  .bottom-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    color: #555;
+  }
+  
+  .existence-duration {
+    font-size: 16px;
+    margin: 0;
+  }
