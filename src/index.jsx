@@ -1,9 +1,10 @@
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import theme from "./theme"; // Import your Material-UI theme configuration
-import App from "./App"; // Import your main App component
 import { BrowserRouter } from "react-router-dom";
+
+import App from "./App"; // Import your main App component
+import theme from "./theme"; // Import your Material-UI theme configuration
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
