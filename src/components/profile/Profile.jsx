@@ -1,17 +1,19 @@
-import React, { useState } from "react";
-import "./Profile.css"; // Import the CSS file
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import './Profile.css'; // Import the CSS file
+
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import React, { useState } from 'react';
 
 function Profile() {
   // Sample user data (you can replace this with your actual data)
   const [user, setUser] = useState({
-    username: "JohnDoe",
+    username: 'JohnDoe',
     age: 30,
-    country: "United States",
+    country: 'United States',
     // You can replace the 'profileImageUrl' with the actual image URL.
-    profileImageUrl: "https://kingchoice.me/media/CACHE/images/f8eafe2ea6bc830e9ea548af6e67cb3c_ov9i5Q7/e929857f3a96b9c0779601c019be1ddc.jpg",
-    registrationDate: "2023-01-01",
+    profileImageUrl:
+      'https://kingchoice.me/media/CACHE/images/f8eafe2ea6bc830e9ea548af6e67cb3c_ov9i5Q7/e929857f3a96b9c0779601c019be1ddc.jpg',
+    registrationDate: '2023-01-01',
   });
 
   // State variables to track edited user information
@@ -40,7 +42,9 @@ function Profile() {
     const registrationDate = new Date(user.registrationDate);
     const currentDate = new Date();
     const timeDifference = currentDate - registrationDate;
-    const daysSinceRegistration = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const daysSinceRegistration = Math.floor(
+      timeDifference / (1000 * 60 * 60 * 24)
+    );
     return daysSinceRegistration;
   };
 
@@ -66,7 +70,7 @@ function Profile() {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => handleButtonClick("Update Profile Icon")}
+            onClick={() => handleButtonClick('Update Profile Icon')}
             className="update-profile-button"
           >
             Update Profile Icon
@@ -104,7 +108,7 @@ function Profile() {
               <Button
                 variant="contained"
                 color="primary"
-                onClick={() => handleButtonClick("Update Particulars")}
+                onClick={() => handleButtonClick('Update Particulars')}
                 className="update-particulars-button"
               >
                 Update Particulars
@@ -114,7 +118,7 @@ function Profile() {
               <Button
                 variant="contained"
                 color="primary"
-                onClick={() => handleButtonClick("Reset Password")}
+                onClick={() => handleButtonClick('Reset Password')}
                 className="reset-password-button"
               >
                 Reset Password
@@ -124,7 +128,7 @@ function Profile() {
         </div>
       </div>
       <div className="bottom-text">
-      <p className="existence-duration">
+        <p className="existence-duration">
           {`${existenceDuration} days since you've started digesting`}
         </p>
       </div>

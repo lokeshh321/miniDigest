@@ -1,19 +1,17 @@
-import React from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { useTheme } from "@mui/material/styles";
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import { useTheme } from '@mui/material/styles';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import React from 'react';
 
-import database from "../../firebase.js";
+// import database from '../../configs/firebase.js';
 
 function Copyright(props) {
   return (
@@ -23,10 +21,10 @@ function Copyright(props) {
       align="center"
       {...props}
     >
-      {"Copyright © "}
+      {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
         MiniDigest
-      </Link>{" "}
+      </Link>{' '}
       {new Date().getFullYear()}.
     </Typography>
   );
@@ -39,16 +37,16 @@ function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // database
-    //   .ref("user")
+    //   .ref('user')
     //   .set({
-    //     email: data.get("email"),
-    //     password: data.get("password"),
+    //     email: data.get('email'),
+    //     password: data.get('password'),
     //   })
     //   .catch(alert);
 
     console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+      email: data.get('email'),
+      password: data.get('password'),
     });
   };
 
@@ -58,9 +56,9 @@ function SignUp() {
       <Box
         sx={{
           marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
         <Avatar sx={{ m: 1, bgcolor: theme.palette.secondary.main }}>
@@ -71,7 +69,7 @@ function SignUp() {
         </Typography>
         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} >
+            <Grid item xs={12}>
               <TextField
                 autoComplete="given-name"
                 name="userName"
