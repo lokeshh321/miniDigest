@@ -1,40 +1,40 @@
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Pagination from "@mui/material/Pagination";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
-import React, { useState } from "react";
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Pagination from '@mui/material/Pagination';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import React, { useState } from 'react';
 
 const images = [
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
+    label: 'San Francisco – Oakland Bay Bridge, United States',
     imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=800&h=500&q=60", // Adjusted image size
+      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=800&h=500&q=60', // Adjusted image size
   },
   {
-    label: "Bird",
+    label: 'Bird',
     imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=800&h=500&q=60", // Adjusted image size
+      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=800&h=500&q=60', // Adjusted image size
   },
   {
-    label: "Bali, Indonesia",
+    label: 'Bali, Indonesia',
     imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&h=500", // Adjusted image size
+      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&h=500', // Adjusted image size
   },
   {
-    label: "Goč, Serbia",
+    label: 'Goč, Serbia',
     imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=800&h=500&q=60", // Adjusted image size
+      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=800&h=500&q=60', // Adjusted image size
   },
 ];
 
-const titles = ["Title 1", "Title 2", "Title 3", "Title 4"];
+const titles = ['Title 1', 'Title 2', 'Title 3', 'Title 4'];
 
 const descriptions = [
-  "Description 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "Description 2: Ut eget libero nec velit vulputate fringilla. Nullam volutpat, dui vel condimentum tincidunt.",
-  "Description 3: Fusce sit amet elit at elit venenatis interdum. Morbi id enim a lorem vestibulum.",
-  "Description 4: Sed eu massa nec metus fermentum hendrerit. Etiam euismod libero a eros bibendum, nec fringilla dolor convallis.",
+  'Description 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  'Description 2: Ut eget libero nec velit vulputate fringilla. Nullam volutpat, dui vel condimentum tincidunt.',
+  'Description 3: Fusce sit amet elit at elit venenatis interdum. Morbi id enim a lorem vestibulum.',
+  'Description 4: Sed eu massa nec metus fermentum hendrerit. Etiam euismod libero a eros bibendum, nec fringilla dolor convallis.',
 ];
 
 function STMS() {
@@ -58,32 +58,32 @@ function STMS() {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
       <Paper
         elevation={3}
         style={{
-          marginTop: "20px",
-          height: "70vh",
-          width: "80%",
-          display: "flex",
-          alignItems: "center",
-          borderRadius: "20px",
+          marginTop: '20px',
+          height: '70vh',
+          width: '80%',
+          display: 'flex',
+          alignItems: 'center',
+          borderRadius: '20px',
         }}
       >
-        <div style={{ width: "60%", padding: "20px" }}>
+        <div style={{ width: '60%', padding: '20px' }}>
           <img
             src={images[activeStep].imgPath}
-            style={{ width: "100%", objectFit: "cover", borderRadius: "20px" }}
+            style={{ width: '100%', objectFit: 'cover', borderRadius: '20px' }}
           />
-          <div style={{ width: "60%", padding: "20px" }}>
+          <div style={{ width: '60%', padding: '20px' }}>
             <div
               style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "20px",
-                gap: "20px",
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: '20px',
+                gap: '20px',
               }}
             >
               <Button
@@ -91,7 +91,7 @@ function STMS() {
                 color="primary"
                 onClick={() => {
                   // Handle Visit Page button click
-                  window.location.href = "/your-page-url"; // Replace with your actual URL
+                  window.location.href = '/your-page-url'; // Replace with your actual URL
                 }}
               >
                 Visit Page
@@ -102,7 +102,7 @@ function STMS() {
                 onClick={() => {
                   // Handle Share button click
                   // Implement your share functionality here
-                  alert("Share functionality goes here");
+                  alert('Share functionality goes here');
                 }}
               >
                 Share
@@ -112,12 +112,12 @@ function STMS() {
         </div>
         <div
           style={{
-            width: "40%",
-            padding: "20px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            marginBottom: "65px",
+            width: '40%',
+            padding: '20px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            marginBottom: '65px',
           }}
         >
           <Typography variant="h5" style={{}}>
@@ -130,8 +130,8 @@ function STMS() {
       </Paper>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "center",
+          display: 'flex',
+          justifyContent: 'center',
           marginTop: 2,
         }}
       >

@@ -1,7 +1,7 @@
-import Typography from "@mui/material/Typography";
-import React from "react";
+import Typography from '@mui/material/Typography';
+import React from 'react';
 
-import STMS from "./STMS";
+import STMS from './STMS';
 
 function Trending() {
   return (

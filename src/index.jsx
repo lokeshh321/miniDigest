@@ -12,7 +12,7 @@ import Profile from './components/profile/Profile';
 import Signup from './components/signup/Signup';
 import Trending from './components/trending/Trending';
 import ErrorPage from './errorPage';
-import theme from './theme'; // Import your Material-UI theme configuration
+import theme from './theme';
 
 const router = createBrowserRouter([
   {
@@ -54,10 +54,8 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  </React.StrictMode>
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <RouterProvider router={router} />
+  </ThemeProvider>
 );

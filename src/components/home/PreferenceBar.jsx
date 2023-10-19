@@ -47,7 +47,13 @@ export default function PreferenceBar() {
   };
 
   return (
-    <Grid container spacing={5} paddingTop={5} justifyContent="center">
+    <Grid
+      container
+      spacing={5}
+      paddingTop={5}
+      paddingBottom={5}
+      justifyContent="center"
+    >
       <Grid item>
         <Button
           key={allButtonState.uniqueId}
