@@ -37,7 +37,7 @@ const descriptions = [
   'Description 4: Sed eu massa nec metus fermentum hendrerit. Etiam euismod libero a eros bibendum, nec fringilla dolor convallis.',
 ];
 
-function STMS() {
+function Carousel() {
   const [activeStep, setActiveStep] = useState(0);
 
   const handleNext = () => {
@@ -71,10 +71,17 @@ function STMS() {
           borderRadius: '20px',
         }}
       >
-        <div style={{ width: '60%', padding: '20px' }}>
+        <div
+          style={{
+            width: '60%',
+            padding: '20px',
+            maxWidth: '100%',
+            maxHeight: '100%',
+          }}
+        >
           <img
             src={images[activeStep].imgPath}
-            style={{ width: '100%', objectFit: 'cover', borderRadius: '20px' }}
+            style={{ width: '100%', objectFit: 'cover', borderRadius: '30px' }}
           />
           <div style={{ width: '60%', padding: '20px' }}>
             <div
@@ -117,7 +124,9 @@ function STMS() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            marginBottom: '65px',
+            marginBottom: '70px',
+            maxWidth: '100%',
+            maxHeight: '100%',
           }}
         >
           <Typography variant="h5" style={{}}>
@@ -141,10 +150,11 @@ function STMS() {
           onChange={handleStepChange}
           size="small"
           color="grey"
+          shape="rounded"
         />
       </Box>
     </div>
   );
 }
 
-export default STMS;
+export default Carousel;
