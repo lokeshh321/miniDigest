@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from 'react';
-// import Home from './api/test';
 import { Outlet } from 'react-router-dom';
 
+// import NewsPage from './api/newsapi';
 import Nav from './components/nav/Nav';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Nav />
       <div id="main-ui">
         <Outlet />
-        {/* <Home /> */}
+        {/* <NewsPage /> */}
       </div>
     </>
   );

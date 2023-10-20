@@ -55,6 +55,7 @@ export default function SummarySection() {
     <Card sx={{ padding: 5, flexBasis: '75%' }}>
       <Typography sx={{ fontSize: '20px', lineHeight: 2.2 }}>
         {placeholder}
+        {/* {responseMsg} */}
       </Typography>
     </Card>
   );
