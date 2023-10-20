@@ -1,18 +1,28 @@
-import Typography from "@mui/material/Typography";
-import React from "react";
+import Typography from '@mui/material/Typography';
+import React from 'react';
 
-import STMS from "./STMS";
+import Carousel from './Carousel';
+
+const centerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center', // Center horizontally
+  justifyContent: 'center', // Center vertically
+  height: '2vh', // Adjusted for better centering
+};
 
 function Trending() {
   return (
     <main>
-      <Typography variant="h6" align="left">
+      <Typography variant="h5" align="left" padding="5px" marginLeft="10px">
         Good Morning, John
       </Typography>
-      <Typography variant="h10" align="left">
-        Here are the top 10 Trending Articles today:
-      </Typography>
-      <STMS />
+      <div style={centerStyle}>
+        <Typography variant="h6">
+          Here are the top 10 Trending Articles today!
+        </Typography>
+      </div>
+      <Carousel />
     </main>
   );
 }
