@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App'; // Import your main App component
+import App from './App';
 import Explore from './components/explore/Explore';
 import Home from './components/home/Home';
 import Landing from './components/landing/Landing';

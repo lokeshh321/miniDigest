@@ -1,14 +1,934 @@
 {
-  "title": "",
-  "description": "",
-  "source": {
-    "id": "",
-    "name": ""
-  },
-  "urlLink": "",
-  "urlToImage": "",
-  "date": "",
-  "summarisedContent": "",
-  "length": "",
-  "category": ""
+  "articles": {
+    "trending": {
+      "00000": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "The Straits Times",
+        "title": "Egypt repairing roads at Gaza crossing ahead of aid delivery - The Straits Times",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMif2h0dHBzOi8vd3d3LnN0cmFpdHN0aW1lcy5jb20vd29ybGQvbWlkZGxlLWVhc3QvdXMtcmVwb3J0cy1kZWFsLXdpdGgtZWd5cHQtdG8tcmVzdGFydC1haWQtdG8tZ2F6YS1hcy1wcm90ZXN0cy1yb2NrLW1pZGRsZS1lYXN0LTHSAQA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-18T22:45:00Z",
+        "content": null
+      },
+      "00001": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "The Straits Times",
+        "title": "US intelligence shows Israel 'not responsible' for Gaza hospital strike - The Straits Times",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMidGh0dHBzOi8vd3d3LnN0cmFpdHN0aW1lcy5jb20vd29ybGQvbWlkZGxlLWVhc3QvdXMtaW50ZWxsaWdlbmNlLXNob3dzLWlzcmFlbC1ub3QtcmVzcG9uc2libGUtZm9yLWdhemEtaG9zcGl0YWwtc3RyaWtl0gEA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-18T20:29:58Z",
+        "content": null
+      },
+      "00002": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "The Straits Times",
+        "title": "Move youth away from high-sugar, high-fat, high-salt foods: former WHO chief scientist - The Straits Times",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMigQFodHRwczovL3d3dy5zdHJhaXRzdGltZXMuY29tL3NpbmdhcG9yZS9oZWFsdGgvbW92ZS15b3V0aC1hd2F5LWZyb20taGlnaC1zdWdhci1oaWdoLWZhdC1oaWdoLXNhbHQtZm9vZHMtZm9ybWVyLXdoby1jaGllZi1zY2llbnRpc3TSAQA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-19T12:35:00Z",
+        "content": null
+      },
+      "00003": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "The Straits Times",
+        "title": "MAS tells DBS, Citibank to investigate disruption; will take appropriate actions after - The Straits Times",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMihwFodHRwczovL3d3dy5zdHJhaXRzdGltZXMuY29tL3NpbmdhcG9yZS9tYXMtaW5zdHJ1Y3RzLWRicy1jaXRpYmFuay10by1pbnZlc3RpZ2F0ZS1vdXRhZ2Utd2lsbC10YWtlLWFwcHJvcHJpYXRlLXN1cGVydmlzb3J5LWFjdGlvbnMtYWZ0ZXLSAQA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-19T12:34:16Z",
+        "content": null
+      },
+      "00004": {
+        "source": {
+          "id": null,
+          "name": "Cgtn.com"
+        },
+        "author": "CGTN",
+        "title": "Scientists surprised by source of largest quake detected on Mars - CGTN",
+        "description": "On May 4, 2022, NASA's InSight lander detected the largest quake yet recorded on Mars, one with a 4.7 magnitude – fairly modest by Earth standards but strong for our planetary neighbor.Given that Mars lacks the geological process called plate tectonics",
+        "url": "https://news.cgtn.com/news/2023-10-19/Scientists-surprised-by-source-of-largest-quake-detected-on-Mars-1o20W5bm7oQ/index.html",
+        "urlToImage": "https://news.cgtn.com/news/2023-10-19/Scientists-surprised-by-source-of-largest-quake-detected-on-Mars-1o20W5bm7oQ/img/08dbcd119f4344c989c05d4293fd695e/08dbcd119f4344c989c05d4293fd695e-750.png",
+        "publishedAt": "2023-10-19T12:01:54Z",
+        "content": "On May 4, 2022, NASA's InSight lander detected the largest quake yet recorded on Mars, one with a 4.7 magnitude fairly modest by Earth standards but strong for our planetary neighbor.\r\nGiven that Mar… [+3822 chars]"
+      },
+      "00005": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "The Straits Times",
+        "title": "Warmer weather towards year-end could worsen dengue situation: NEA - The Straits Times",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMidmh0dHBzOi8vd3d3LnN0cmFpdHN0aW1lcy5jb20vc2luZ2Fwb3JlL2hlYWx0aC93YXJtZXItd2VhdGhlci10b3dhcmRzLWVuZC1vZi10aGUteWVhci1jb3VsZC13b3JzZW4tZGVuZ3VlLXNpdHVhdGlvbi1uZWHSAQA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-19T11:30:00Z",
+        "content": null
+      },
+      "00006": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "Malay Mail",
+        "title": "OPPO Find N3 and Find N3 Flip Smartphones Launch Globally Unlocking a New Level of Foldable Excellence - Malay Mail",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiqwFodHRwczovL3d3dy5tYWxheW1haWwuY29tL25ld3MvbW9uZXkvbWVkaWFvdXRyZWFjaC8yMDIzLzEwLzE5L29wcG8tZmluZC1uMy1hbmQtZmluZC1uMy1mbGlwLXNtYXJ0cGhvbmVzLWxhdW5jaC1nbG9iYWxseS11bmxvY2tpbmctYS1uZXctbGV2ZWwtb2YtZm9sZGFibGUtZXhjZWxsZW5jZS8yNTQ0MjTSAa8BaHR0cHM6Ly93d3cubWFsYXltYWlsLmNvbS9hbXAvbmV3cy9tb25leS9tZWRpYW91dHJlYWNoLzIwMjMvMTAvMTkvb3Bwby1maW5kLW4zLWFuZC1maW5kLW4zLWZsaXAtc21hcnRwaG9uZXMtbGF1bmNoLWdsb2JhbGx5LXVubG9ja2luZy1hLW5ldy1sZXZlbC1vZi1mb2xkYWJsZS1leGNlbGxlbmNlLzI1NDQyNA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-19T11:14:49Z",
+        "content": null
+      },
+      "00007": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "The Straits Times",
+        "title": "DPM Heng to public servants: Be willing to reimagine policies and how they are delivered - The Straits Times",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMif2h0dHBzOi8vd3d3LnN0cmFpdHN0aW1lcy5jb20vc2luZ2Fwb3JlL2RwbS1oZW5nLXRvLXB1YmxpYy1zZXJ2YW50cy1iZS13aWxsaW5nLXRvLXJlLWltYWdpbmUtcG9saWNpZXMtYW5kLWhvdy10aGV5LWFyZS1kZWxpdmVyZWTSAQA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-19T10:55:00Z",
+        "content": null
+      },
+      "00008": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "CNA",
+        "title": "Wet weather to keep regional hotspots 'subdued', low chance of haze affecting Singapore: NEA - CNA",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiY2h0dHBzOi8vd3d3LmNoYW5uZWxuZXdzYXNpYS5jb20vc2luZ2Fwb3JlL2hhemUtbmVhLWFkdmlzb3J5LXBtMi01LXBzaS1yZWFkaW5ncy13ZWF0aGVyLXJhaW4tMzg1ODExNtIBAA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-19T10:42:03Z",
+        "content": null
+      },
+      "00009": {
+        "source": {
+          "id": "google-news",
+          "name": "Google News"
+        },
+        "author": "NUS News",
+        "title": "NUS scientists develop innovative magnetic gel that heals diabetic wounds three times faster - NUS News",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiXmh0dHBzOi8vbmV3cy5udXMuZWR1LnNnL2lubm92YXRpdmUtbWFnbmV0aWMtZ2VsLXRoYXQtaGVhbHMtZGlhYmV0aWMtd291bmRzLXRocmVlLXRpbWVzLWZhc3Rlci_SAQA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-10-19T09:10:06Z",
+        "content": null
+      }
+    },
+
+    "business": {
+      "01000": {
+        "source": {
+          "id": null,
+          "name": "Gizmodo.com"
+        },
+        "author": "Kevin Hurler",
+        "title": "Best Buy CEO Blames Taylor Swift for Sales Slump and 'Funflation'",
+        "description": "It’s Taylor Swift’s world, and we’re all just living in it. In an economy racked with corporate greed-induced hyperinflation and a population evermore saddled with student loan debt, younger generations are apparently more interested in shelling out for exper…",
+        "url": "https://gizmodo.com/best-buy-ceo-blames-taylor-swift-for-sales-slump-1850929463",
+        "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/cfcdb31b0c5b06e3e407dca9c145a839.jpg",
+        "publishedAt": "2023-10-16T17:00:00Z",
+        "content": "Its Taylor Swifts world, and were all just living in it. In an economy racked with corporate greed-induced hyperinflation and a population evermore saddled with student loan debt, younger generations… [+2722 chars]"
+      },
+      "01001": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Huileng Tan",
+        "title": "An oligarch who predicted that Russia may run out of money next year is surprised the economy has held up so far",
+        "description": "\"I was more or less sure that up to 30% of the economy would collapse, but it was way less,\" Oleg Deripaska told the FT.",
+        "url": "https://www.businessinsider.com/russia-economy-oligarch-billionaire-oleg-deripaska-surprise-sanctions-ukraine-war-2023-9",
+        "urlToImage": "https://i.insider.com/651248c059fd710019f017d0?width=1200&format=jpeg",
+        "publishedAt": "2023-09-26T03:05:49Z",
+        "content": "Composite image of Vladimir Putin and Russian tycoon Oleg Deripaska.Getty Images\r\n<ul>\n<li>Oligarch Oleg Deripaska told the FT he was surprised at Russia's economic resilience.</li>\n<li>Deripaska had… [+2423 chars]"
+      },
+      "01002": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Cork Gaines",
+        "title": "The US consumer is starting to crack",
+        "description": "Consumer spending in the US is beginning to crack under the pressure. This spells trouble for the economy.",
+        "url": "https://www.businessinsider.com/recession-outlook-economy-consumer-spending-down-breaking-2023-9",
+        "urlToImage": "https://i.insider.com/6515a700c50dce001913495a?width=1200&format=jpeg",
+        "publishedAt": "2023-09-28T17:49:45Z",
+        "content": "nullGetty; Rebecca Zisser/Insider\r\n<ul><li>Consumer spending has been holding up the economy.</li><li>Over the summer, it seemed the US economy could defeat inflation without a crash.</li><li>But tha… [+4706 chars]"
+      },
+      "01003": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Linette Lopez",
+        "title": "America is stuck in a greased-pig economy",
+        "description": "Inflation may be about to slip through our fingers again. Runaway prices could trigger pain for consumers, a stock market crash, and even a recession.",
+        "url": "https://www.businessinsider.com/america-greased-pig-economy-higher-inflation-stock-market-crash-recession-2023-9",
+        "urlToImage": "https://i.insider.com/65087674cd637c0019c70692?width=1200&format=jpeg",
+        "publishedAt": "2023-09-19T09:22:01Z",
+        "content": "America has been living in an economic version of the greased-pig game — and if we lose our grip on inflation, things could get ugly.Liam Eisenberg for Insider\r\nTrying to catch a greased pig is an Am… [+9686 chars]"
+      },
+      "01004": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Filip De Mott",
+        "title": "The US economy could end up like China's as massive debt weighs on growth, market expert says",
+        "description": "\"When the stimulus and other temporary boosts wear off, the American economy could settle into a long, slow grind.\"",
+        "url": "https://www.businessinsider.com/us-economy-outlook-china-debt-joe-biden-stimulus-federal-spending-2023-9",
+        "urlToImage": "https://i.insider.com/651193ace2c0220019ef44c8?width=1200&format=jpeg",
+        "publishedAt": "2023-09-25T14:51:31Z",
+        "content": "Chung Sung-Jun/Getty Images\r\n<ul>\n<li>The US economy could face a \"long, slow grind\" as huge debts take their toll, Ruchir Sharma wrote.</li>\n<li>There has been $8 trillion in new federal spending si… [+2151 chars]"
+      },
+      "01005": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Kai Xiang Teo",
+        "title": "The university hosting an academic conference on Taylor Swift hopes that 'TayTay' will make an appearance",
+        "description": "The \"Swiftposium\" aims to discuss the implications of Swift's impact on gender, the economy, and mental health, per the organizers' website.",
+        "url": "https://www.businessinsider.com/taylor-swift-eras-tour-academic-conference-australia-hoping-she-comes-2023-9",
+        "urlToImage": "https://i.insider.com/650d169319f33e0019046465?width=1200&format=jpeg",
+        "publishedAt": "2023-09-22T08:59:30Z",
+        "content": "Composite image of Taylor Swift and the University of MelbourneAllen J. Schaben / Los Angeles Times and Getty Images\r\n<ul>\n<li>The University of Melbourne is hosting an academic conference on Taylor … [+3270 chars]"
+      },
+      "01006": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Filip De Mott",
+        "title": "Chinese consumers are turning to the lottery for money as the economy sputters and youth employment soars",
+        "description": "\"The worse the economy is, the more lottery tickets will be sold,\" a Chinese social media user wrote.",
+        "url": "https://www.businessinsider.com/chinese-economy-consumers-lottery-ticket-sales-high-youth-unemployment-growth-2023-10",
+        "urlToImage": "https://i.insider.com/651b08f5617692f0d03cc378?width=1200&format=jpeg",
+        "publishedAt": "2023-10-02T19:36:05Z",
+        "content": "China's President Xi JinpingLintao Zhang\r\n<ul>\n<li>Lottery ticket sales in China rose 53.6% in August from a year ago, finance ministry data shows.</li>\n<li>That coincides with high youth unemploymen… [+2334 chars]"
+      },
+      "01007": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Phil Rosen",
+        "title": "China has banned brokers from opening overseas trading accounts for local investors",
+        "description": "As the economy struggles, Beijing has also launched its first purchasing program targeting shares in top banks.",
+        "url": "https://markets.businessinsider.com/news/stocks/china-economy-ban-brokers-markets-overseas-trading-accounts-stocks-beijing-2023-10",
+        "urlToImage": "https://i.insider.com/65282d4f68f1d46f52b04354?width=1200&format=jpeg",
+        "publishedAt": "2023-10-12T18:34:12Z",
+        "content": "People cross a street in the technology district of Shenzhen, China September 14, 2015.REUTERS/Bobby Yip\r\n<ul>\n<li>China has banned brokers from opening overseas trading accounts, the Financial Times… [+2170 chars]"
+      },
+      "01008": {
+        "source": {
+          "id": null,
+          "name": "ReadWrite"
+        },
+        "author": "Deanna Ritchie",
+        "title": "Unleashing Women Entrepreneurs: Boosting Global Economy",
+        "description": "On 21 September 2023, the United Nations (UN) demonstrated its commitment to inclusive funding by highlighting the importance of empowering […]\nThe post Unleashing Women Entrepreneurs: Boosting Global Economy appeared first on ReadWrite.",
+        "url": "https://readwrite.com/unleashing-women-entrepreneurs-boosting-global-economy/",
+        "urlToImage": "https://readwrite.com/wp-content/uploads/2023/09/Women-Entrepreneurs.jpg",
+        "publishedAt": "2023-09-27T14:00:33Z",
+        "content": "On 21 September 2023, the United Nations (UN) demonstrated its commitment to inclusive funding by highlighting the importance of empowering female entrepreneurs to achieve gender equality and stimula… [+6701 chars]"
+      },
+      "01009": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Joseph Wilkins",
+        "title": "Oil could be headed as high as $150 unless the US boosts its output, says major exploration firm",
+        "description": "US crude prices are around the $90 mark, and some market commentators have already flagged oil as a major concern for the economy.",
+        "url": "https://markets.businessinsider.com/news/commodities/oil-could-hit-150-barrel-unless-the-us-boosts-output-2023-9",
+        "urlToImage": "https://i.insider.com/6512f61251acc80019f0c93c?width=1200&format=jpeg",
+        "publishedAt": "2023-09-27T08:45:01Z",
+        "content": "Oil drillingGetty Images\r\n<ul>\n<li>Oil prices could hit $150 a barrel unless the US boosts exploration, a top shale executive warned.</li>\n<li>Production could peak in the Permian Basin, said the Con… [+1584 chars]"
+      }
+    },
+
+    "entertainment": {
+      "02000": {
+        "source": {
+          "id": null,
+          "name": "Gizmodo.com"
+        },
+        "author": "Linda Codega",
+        "title": "The Hunger Games Films Were Exceptional But Got Overshadowed",
+        "description": "When The Hunger Games movie came out in 2012, the world was set on fire. Jennifer Lawrence became a superstar, the books stayed on bestseller lists for months, and another three films were quickly announced. The prequel story based on the newly released book …",
+        "url": "https://gizmodo.com/the-hunger-games-films-were-exceptional-but-got-oversha-1850937602",
+        "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b59b71ac978fc989bc1cf9c33c44d8c4.png",
+        "publishedAt": "2023-10-18T17:15:00Z",
+        "content": "When The Hunger Games movie came out in 2012, the world was set on fire. Jennifer Lawrence became a superstar, the books stayed on bestseller lists for months, and another three films were quickly an… [+4897 chars]"
+      },
+      "02001": {
+        "source": {
+          "id": "the-verge",
+          "name": "The Verge"
+        },
+        "author": "Andrew Webster",
+        "title": "The Halloween 2023 StoryScream: things to play and watch this spooky season",
+        "description": "It’s spooky season, and 2023 features releases like the films Talk to Me, No One Will Save You, and Birth/Rebirth, alongside video games like Dead Space and Resident Evil 4.",
+        "url": "https://www.theverge.com/23911556/halloween-2023-games-movies-tv-streaming-recommendations",
+        "urlToImage": "https://cdn.vox-cdn.com/thumbor/MkVlzapz-6flcBCRx3aQtxh0U0Y=/0x0:1920x1080/1200x628/filters:focal(1051x424:1052x425)/cdn.vox-cdn.com/uploads/chorus_asset/file/24994361/https___cdn.sanity.io_images_xq1bjtf4_production_7ac3aed4b31746e41349fecefe1ea74f0123a994_1920x1080.png",
+        "publishedAt": "2023-10-11T14:00:00Z",
+        "content": "October is a time for spooky things, and you cant really go wrong with the classics: watching some Friday the 13th or playing a little Silent Hill. But every year, theres also a steady stream of new … [+26451 chars]"
+      },
+      "02002": {
+        "source": {
+          "id": null,
+          "name": "Lifehacker.com"
+        },
+        "author": "Jason Keil",
+        "title": "20 Great Nintendo Switch Games for Little Kids (That Don't Star Mario)",
+        "description": "Before Barbie tiptoed her way into theaters, 2023's number one movie was an animated kid’s flick based on a video game about a plumber taking mushrooms, a primate with daddy issues, and a giant fire-breathing turtle crooning about peaches.Read more...",
+        "url": "https://lifehacker.com/best-nintendo-switch-games-little-kids-1850897137",
+        "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/82a4ba03cc692f2dba7d60ef91793561.jpg",
+        "publishedAt": "2023-10-04T16:30:00Z",
+        "content": "Before Barbie tiptoed her way into theaters, 2023's number one movie was an animated kids flick based on a video game about a plumber taking mushrooms, a primate with daddy issues, and a giant fire-b… [+3998 chars]"
+      },
+      "02003": {
+        "source": {
+          "id": "bbc-news",
+          "name": "BBC News"
+        },
+        "author": "https://www.facebook.com/bbcnews",
+        "title": "Idris Elba: Actors in video games like Phantom Liberty is 'sign of the times'",
+        "description": "Idris Elba, who stars in Cyberpunk 2077: Phantom Liberty, sees a future where films and games converge.",
+        "url": "https://www.bbc.co.uk/news/entertainment-arts-66801987",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/9F9E/production/_131226804_4058222b-ac65-489e-8156-4b7ba5b15382.jpg",
+        "publishedAt": "2023-09-26T00:36:04Z",
+        "content": "The actor Idris Elba is no stranger to the world of video games, but says he has a new-found appreciation for the art form following his latest role.\r\nElba stars as Solomon Reed in the latest spy-thr… [+6394 chars]"
+      },
+      "02004": {
+        "source": {
+          "id": null,
+          "name": "Gizmodo.com"
+        },
+        "author": "Germain Lussier",
+        "title": "The New Rocketeer Movie Gets an Encouraging Update",
+        "description": "After two years on the ground, a new version of The Rocketeer is hopefully ready to blast off once again. Read more...",
+        "url": "https://gizmodo.com/rocketeer-reboot-sequel-david-oyelowo-disney-plus-film-1850918819",
+        "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/1d98d36b6a10f79d4fe4a77fb3ba54c0.jpg",
+        "publishedAt": "2023-10-11T19:30:00Z",
+        "content": "After two years on the ground, a new version of The Rocketeer is hopefully ready to blast off once again. \r\nBack in 2021, news broke that David Oyelowo (Selma, Star Wars Rebels) was set to produce an… [+1785 chars]"
+      },
+      "02005": {
+        "source": {
+          "id": null,
+          "name": "Lifehacker.com"
+        },
+        "author": "Ross Johnson",
+        "title": "The 24 Best Horror Comedies Streaming Right Now",
+        "description": "Author Robert Block (Psycho) described comedy and horror as “opposite sides of the same coin.” Since the silent days, movies have blended the styles, and, by 1948, Abbott and Costello Meet Frankenstein was doing bigger box office numbers than Universal’s stra…",
+        "url": "https://lifehacker.com/best-horror-comedies-1850914493",
+        "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/f483d9668b10268233c3de0ee63aa38b.png",
+        "publishedAt": "2023-10-11T15:00:00Z",
+        "content": "Author Robert Block (Psycho) described comedy and horror as opposite sides of the same coin. Since the silent days, movies have blended the styles, and, by 1948, Abbott and Costello Meet Frankenstein… [+13174 chars]"
+      },
+      "02006": {
+        "source": {
+          "id": "the-verge",
+          "name": "The Verge"
+        },
+        "author": "Kevin Nguyen",
+        "title": "Two words: jazz anime",
+        "description": "In this manga adaptation, a young boy from a small town goes to Tokyo to try and become the greatest jazz musician in the world. What follows is an earnest, exciting anime full of thrilling performances.",
+        "url": "https://www.theverge.com/23906592/blue-giant-review-jazz-anime",
+        "urlToImage": "https://cdn.vox-cdn.com/thumbor/25erYmSyDx7J2nfZ54qoZ5Dx_SU=/0x0:1920x1080/1200x628/filters:focal(1381x539:1382x540)/cdn.vox-cdn.com/uploads/chorus_asset/file/24982988/BG_main.jpg",
+        "publishedAt": "2023-10-07T12:00:00Z",
+        "content": "Jazz anime Blue Giant hits all the high notes\r\nJazz anime Blue Giant hits all the high notes\r\n / In this manga adaptation, a young boy honks and squeaks his way through Tokyos clubs.\r\nByKevin Nguyen,… [+3703 chars]"
+      },
+      "02007": {
+        "source": {
+          "id": null,
+          "name": "Lifehacker.com"
+        },
+        "author": "Ross Johnson",
+        "title": "21 of the Best Action Movies on Netflix Right Now",
+        "description": "Looking for a fast-moving car chase? Aerial acrobatics? How about a bit of fisticuffs? Or a tiger eating a dude? Look no further: Netflix has your numberRead more...",
+        "url": "https://lifehacker.com/the-best-action-movies-on-netflix-right-now-1850856583",
+        "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/10a2cbefdb7f8d8100070df99182762e.jpg",
+        "publishedAt": "2023-09-22T15:00:00Z",
+        "content": "Looking for a fast-moving car chase? Aerial acrobatics? How about a bit of fisticuffs? Or a tiger eating a dude? Look no further: Netflix has your number\r\nThere are movies here that are high-minded t… [+13645 chars]"
+      },
+      "02008": {
+        "source": {
+          "id": null,
+          "name": "Lifehacker.com"
+        },
+        "author": "Daniel Oropeza",
+        "title": "These Capcom Games Are up to 83% Off at Best Buy",
+        "description": "Best Buy is currently having a Capcom sale of digital video games for up to 83% off. You can find Resident Evil, Devil May Cry, and Dead Rising games for the Nintendo Switch and Xbox starting at $5. Here are the games that are available, their price history, …",
+        "url": "https://lifehacker.com/these-capcom-games-are-up-to-83-off-at-best-buy-1850938716",
+        "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/a3cf8e9ac08874f152bb9d678c982546.jpg",
+        "publishedAt": "2023-10-18T20:00:00Z",
+        "content": "Best Buy is currently having a Capcom sale of digital video games for up to 83% off. You can find Resident Evil, Devil May Cry, and Dead Rising games for the Nintendo Switch and Xbox starting at $5. … [+1966 chars]"
+      },
+      "02009": {
+        "source": {
+          "id": null,
+          "name": "Gizmodo.com"
+        },
+        "author": "Justin Carter",
+        "title": "Netflix's Tomb Raider Will Show Lara Croft's Journey from Survivor to Legend",
+        "description": "During its “Drop 01\" livestream event, Netflix unveiled the first official look at its Tomb Raider anime, The Legend of Lara Croft. The show was originally announced back in 2021 and marks the first new piece of Tomb Raider media since the 2018 reboot movie s…",
+        "url": "https://gizmodo.com/tomb-raider-lara-croft-netflix-anime-teaser-release-dat-1850875360",
+        "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/36cf1be9dbea39302b03977486efcb83.jpg",
+        "publishedAt": "2023-09-27T17:05:00Z",
+        "content": "During its Drop 01\" livestream event, Netflix unveiled the first official look at its Tomb Raider anime, The Legend of Lara Croft. The show was originally announced back in 2021 and marks the first n… [+1666 chars]"
+      }
+    },
+
+    "health": {
+      "03000": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Lakshmi Varanasi",
+        "title": "Tech workers trying to live longer are turning to buzzy peptide treatments",
+        "description": "A broad category of anti-aging treatments called peptides is taking off in popularity with Silicon Valley's biohackers.",
+        "url": "https://www.businessinsider.com/peptide-therapy-getting-popular-with-tech-workers-2023-10",
+        "urlToImage": "https://i.insider.com/6528979f6561dd877e7997f8?width=1200&format=jpeg",
+        "publishedAt": "2023-10-14T09:07:01Z",
+        "content": "Peptide therapies have taken off since the onset of the pandemic and the rise of weight loss drugs like Ozempic. NurPhoto\r\n<ul><li>Peptide anti-aging treatments are surging in popularity with tech wo… [+3943 chars]"
+      },
+      "03001": {
+        "source": {
+          "id": null,
+          "name": "NPR"
+        },
+        "author": "Mara Gordon",
+        "title": "I try to be a body-positive doctor. It's getting harder in the age of Ozempic",
+        "description": "A physician decided to stop talking to patients about weight, and focus on health instead. But the new weight-loss drugs forced her to rethink how to help patients without feeding into stigma.",
+        "url": "https://www.npr.org/sections/health-shots/2023/10/04/1202723479/ozempic-body-positive-medicine-weight-stigma",
+        "urlToImage": "https://media.npr.org/assets/img/2023/10/03/finalv2_wide-552bdd683fec7ad2e1ac24164d9a29c375e9b6c8-s1400-c100.jpg",
+        "publishedAt": "2023-10-04T13:00:45Z",
+        "content": "Right around the time Ozempic came out, I started to change the way I practice medicine. As the new class of weight-loss drug ushered in a highly medicalized era of Americans' obsession with being th… [+8608 chars]"
+      },
+      "03002": {
+        "source": {
+          "id": null,
+          "name": "Mental Floss"
+        },
+        "author": "Kat Long",
+        "title": "5 Misconceptions about Health and Wellness",
+        "description": "How much water should you really drink a day? Well, it’s complicated.",
+        "url": "https://www.mentalfloss.com/posts/health-wellness-misconceptions",
+        "urlToImage": "https://images2.minutemediacdn.com/image/upload/c_crop,w_724,h_407,x_0,y_25/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/mentalfloss/01hbc81m2qpgs1g4frrp.jpg",
+        "publishedAt": "2023-10-09T16:00:00Z",
+        "content": "We have a lot of misconceptions when it comes to health and wellness, from the cold-fighting powers of Vitamin C to whatever it is that crystals are supposed to do. Lets break down a few of them, ada… [+13670 chars]"
+      },
+      "03003": {
+        "source": {
+          "id": "time",
+          "name": "Time"
+        },
+        "author": "Jamie Ducharme",
+        "title": "Can AI Chatbots Ever Replace Human Therapists?",
+        "description": "AI chatbots that support mental health show promise in treating anxiety and depression. But can they ever replace human therapists?",
+        "url": "https://time.com/6320378/ai-therapy-chatbots/",
+        "urlToImage": "https://api.time.com/wp-content/uploads/2023/10/therapy-chatbots.jpg?quality=85",
+        "publishedAt": "2023-10-04T17:36:14Z",
+        "content": "This morning, my wellness coach reminded me to savor each exciting moment in my day, but to always take time to rest and recharge. Its good advicegood enough that I would believe it came from a human… [+7344 chars]"
+      },
+      "03004": {
+        "source": {
+          "id": null,
+          "name": "CNET"
+        },
+        "author": "Jessica Rendall",
+        "title": "How I Use Sleep Deprivation as a Productivity Tool, and Why That's a Horrible Idea - CNET",
+        "description": "It's devastating for your health long-term, but some people thrive at night with short-term bursts of productivity.",
+        "url": "https://www.cnet.com/health/sleep/how-i-use-sleep-deprivation-as-a-productivity-tool-and-why-thats-a-horrible-idea/",
+        "urlToImage": "https://www.cnet.com/a/img/resize/8aa8aea79aa7835be3ff143dbc99dd029d4330f3/hub/2023/09/29/b64f6629-5ef6-4f4f-a77c-0de764737f59/gettyimages-1440468866.jpg?auto=webp&fit=crop&height=675&width=1200",
+        "publishedAt": "2023-10-02T13:30:00Z",
+        "content": "It's early morning in 2018 and I'm sitting on the floor of my bedroom, in a bathrobe, drinking Diet Mountain Dew. \r\nI'm leaning against the wall, opposite my bed, so that I'm not tempted to crawl to … [+13826 chars]"
+      },
+      "03005": {
+        "source": {
+          "id": null,
+          "name": "Forbes"
+        },
+        "author": "Geri Stengel, Contributor, \n Geri Stengel, Contributor\n https://www.forbes.com/sites/geristengel/",
+        "title": "Farmbox’s Pivot From D2C To B2B Results In Exponential Growth",
+        "description": "To combat food insecurity, Farmbox Rx partners with health plans to offer their members access to these healthy foods through their insurance or OTC member benefit.",
+        "url": "https://www.forbes.com/sites/geristengel/2023/10/04/farmboxs-pivot-from-d2c-to-b2b-results-in-exponential-growth/",
+        "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/651b5cf2a641e5a3492b6543/0x0.jpg?format=jpg&width=1200",
+        "publishedAt": "2023-10-04T11:00:00Z",
+        "content": "Ashley Tyrner, CEO, FarmboxRx. It partners with health plans to offer their members access to ... [+] healthy foods through their insurance or OTC member benefits.\r\nFarmboxRx\r\nFifty-four million peop… [+6610 chars]"
+      },
+      "03006": {
+        "source": {
+          "id": null,
+          "name": "AppleInsider"
+        },
+        "author": "news@appleinsider.com (William Gallagher)",
+        "title": "Pickleball sport helps improve health, say Apple researchers",
+        "description": "An Apple Health study comparing tennis to the increasingly popular pickleball says that both sports are beneficial to the health of players of all ages.Pickleball player with an Apple WatchThe report is from the Apple Heart and Movement Study, which was found…",
+        "url": "https://appleinsider.com/articles/23/10/18/pickelball-sport-helps-improve-health-say-apple-researchers",
+        "urlToImage": "https://photos5.appleinsider.com/gallery/56866-115665-000-lead-Pickelball-xl.jpg",
+        "publishedAt": "2023-10-18T13:34:55Z",
+        "content": "Pickleball player with an Apple Watch\r\nAn Apple Health study comparing tennis to the increasingly popular pickleball says that both sports are beneficial to the health of players of all ages.\r\nThe re… [+3245 chars]"
+      },
+      "03007": {
+        "source": {
+          "id": null,
+          "name": "Small Business Trends"
+        },
+        "author": "Samson Haileyesus",
+        "title": "40 Inspirational Wellness Wednesday Quotes",
+        "description": "Get your workforce on a path towards a healthier body and mind with these inspirational Wellness Wednesday quotes to improve their life.",
+        "url": "https://smallbiztrends.com/2023/07/wellness-wednesday-quotes.html",
+        "urlToImage": "https://media.smallbiztrends.com/2022/05/xx-inspirational-wellness-wednesday-quotes.png",
+        "publishedAt": "2023-10-18T13:30:56Z",
+        "content": "Wellness Wednesday is a campaign occurring every Wednesday to remind people about the importance of positivity, mental health, and wellbeing. According to the Centers for Disease Control and Preventi… [+11869 chars]"
+      },
+      "03008": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Kelli María Korducki",
+        "title": "The distressing downside of fitness trackers",
+        "description": "While fitness trackers and step counters can help you be healthier, new studies show that they can also wind up hurting you.",
+        "url": "https://www.businessinsider.com/fitness-tracker-step-counter-calorie-tracker-health-data-downside-2023-9",
+        "urlToImage": "https://i.insider.com/650366762a72d60019d55734?width=1200&format=jpeg",
+        "publishedAt": "2023-09-21T10:01:01Z",
+        "content": "Fitness trackers have taken over. But is the deluge of fitness data making Americans healthier?Arantza Pena Popo/ Insider\r\nOver the past seven or eight years, I've developed a habit. Whenever I have … [+12209 chars]"
+      },
+      "03009": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Juliana Kaplan",
+        "title": "Welcome to office dystopia, where everyday work can feel irrelevant as global conflict rages",
+        "description": "Focusing your energy on everyday work during hard times can make real-world problems feel like a dystopia.",
+        "url": "https://www.businessinsider.com/dystopia-working-during-hard-times-return-to-office-hustle-culture-2023-10",
+        "urlToImage": "https://i.insider.com/652980d055f52b01b35f4339?width=1200&format=jpeg",
+        "publishedAt": "2023-10-18T10:04:01Z",
+        "content": "nullJasmin Merdan/Getty Images\r\n<ul><li>More and more workers are returning to the office this fall, just as another horrific news cycle ramps up.</li><li>It can create a feeling of numb office dysto… [+3864 chars]"
+      }
+    },
+
+    "science": {
+      "04000": {
+        "source": {
+          "id": null,
+          "name": "ReadWrite"
+        },
+        "author": "Muhammad Sohaib Saleem",
+        "title": "From Sci-Fi to Reality: The Roadmap of AI Development and Its Future Potential",
+        "description": "Artificial Intelligence has come a long way since its conceptualization in science fiction. What was once an imaginative idea is […]\nThe post From Sci-Fi to Reality: The Roadmap of AI Development and Its Future Potential appeared first on ReadWrite.",
+        "url": "https://readwrite.com/from-sci-fi-to-reality-the-roadmap-of-ai-development-and-its-future-potential/",
+        "urlToImage": "https://readwrite.com/wp-content/uploads/2023/08/Roadmap-of-AI-Development.jpg",
+        "publishedAt": "2023-09-25T20:00:51Z",
+        "content": "Artificial Intelligence has come a long way since its conceptualization in science fiction. What was once an imaginative idea is now a reality, revolutionizing various aspects of our lives. From self… [+8873 chars]"
+      },
+      "04001": {
+        "source": {
+          "id": null,
+          "name": "Wakehealth.edu"
+        },
+        "author": null,
+        "title": "Wound Healing Research Produces Full Thickness Human Bioprinted Skin",
+        "description": "A research paper published today in Science Translational Medicine presents a significant breakthrough in the area of skin regeneration and wound healing by researchers at the Wake Forest Institute for Regenerative Medicine (WFIRM).",
+        "url": "https://newsroom.wakehealth.edu/news-releases/2023/10/new-wound-healing-research-produces-full-thickness-human-bioprinted-skin",
+        "urlToImage": "",
+        "publishedAt": "2023-10-05T00:32:35Z",
+        "content": "A research paper published today in Science Translational Medicine presents a significant breakthrough in the area of skin regeneration and wound healing by researchers at the Wake Forest Institute f… [+2860 chars]"
+      },
+      "04002": {
+        "source": {
+          "id": null,
+          "name": "NPR"
+        },
+        "author": "Rob Stein",
+        "title": "Japanese scientists race to create human eggs and sperm in the lab",
+        "description": "Scientists in Japan are leaders in the development of new technology that could make sperm and eggs from practically any cell in the body. The results could transform human reproduction.",
+        "url": "https://www.npr.org/sections/health-shots/2023/09/28/1200105467/japanese-scientists-race-to-create-human-eggs-and-sperm-in-the-lab",
+        "urlToImage": "https://media.npr.org/assets/img/2023/09/27/ivg_osaka_000031_wide-64cd84bf82827ed0816ec587a382c31bbe8bed58-s1400-c100.jpg",
+        "publishedAt": "2023-09-28T09:01:25Z",
+        "content": "Katsuhiko Hayashi, a developmental geneticist at Osaka University, is working on ways to make what he calls \"artificial\" eggs and sperm from any cell in the human body.\r\nKosuke Okahara/Kosuke Okahara… [+9749 chars]"
+      },
+      "04003": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Insider Inc.",
+        "title": "The US is planning its first fusion plant, and it could generate pollution-free power by 2035",
+        "description": "US Energy Secretary Jennifer Granholm said the country is planning its first-ever fusion powerplant to achieve pollution-free power by 2035.",
+        "url": "https://www.businessinsider.com/us-plans-first-fusion-plant-for-pollution-free-energy-2023-9",
+        "urlToImage": "https://i.insider.com/6511fc8982a83a00194b6e44?width=1200&format=jpeg",
+        "publishedAt": "2023-09-25T22:04:11Z",
+        "content": "A type of fusion test reactor for scientific research at\nPrinceton Plasma Physics Laboratory.Princeton Plasma Physics Laboratory\r\n<ul>\n<li>Nuclear fusion is a breakthrough technology that could help … [+5932 chars]"
+      },
+      "04004": {
+        "source": {
+          "id": null,
+          "name": "Fiftyyears.com"
+        },
+        "author": "Fifty Years",
+        "title": "Elicit – LLMs to Accelerate Research",
+        "description": "Fifty Years partners with Elicit to supercharge research with AI. Elicit is an AI research assistant for scientists.",
+        "url": "https://substack.fiftyyears.com/p/elicit",
+        "urlToImage": "https://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F211dac33-6927-4e5d-ade9-d41b9eb21de3.avif",
+        "publishedAt": "2023-09-25T16:29:19Z",
+        "content": "The world is drowning in scientific research. Over 2 million scientific papers are published each year. Thats 5,500 per day! If you worked 24 hours a day with no breaks, youd have to read 1 paper eve… [+10039 chars]"
+      },
+      "04005": {
+        "source": {
+          "id": null,
+          "name": "Phys.Org"
+        },
+        "author": "Science X",
+        "title": "Google AI tool predicts danger of genetic mutations",
+        "description": "Researchers at Google DeepMind, the tech giant's artificial intelligence arm, on Tuesday introduced a tool that predicts whether genetic mutations are likely to cause harm, a breakthrough that could help research into rare diseases.",
+        "url": "https://phys.org/news/2023-09-google-ai-tool-danger-genetic.html",
+        "urlToImage": "https://scx2.b-cdn.net/gfx/news/2023/googles-new-ai-tool-ca.jpg",
+        "publishedAt": "2023-09-20T08:35:47Z",
+        "content": "Researchers at Google DeepMind, the tech giant's artificial intelligence arm, on Tuesday introduced a tool that predicts whether genetic mutations are likely to cause harm, a breakthrough that could … [+3103 chars]"
+      },
+      "04006": {
+        "source": {
+          "id": null,
+          "name": "Science Daily"
+        },
+        "author": null,
+        "title": "Researchers create a neural network for genomics -- one that explains how it achieves accurate predictions",
+        "description": "A team of computer scientists has created a neural network that can explain how it reaches its predictions. The work reveals what accounts for the functionality of neural networks--the engines that drive artificial intelligence and machine learning--thereby i…",
+        "url": "https://www.sciencedaily.com/releases/2023/10/231006104521.htm",
+        "urlToImage": "https://www.sciencedaily.com/images/scidaily-icon.png",
+        "publishedAt": "2023-10-06T14:45:21Z",
+        "content": "A team of New York University computer scientists has created a neural network that can explain how it reaches its predictions. The work reveals what accounts for the functionality of neural networks… [+2494 chars]"
+      },
+      "04007": {
+        "source": {
+          "id": null,
+          "name": "Phys.Org"
+        },
+        "author": "Science X",
+        "title": "Researchers develop an innovative microscope platform to unveil the intricacies of skeletal muscle regeneration",
+        "description": "Researchers at the Hong Kong University of Science and Technology (HKUST) have created a cutting-edge platform consisting of a dual-laser nonlinear optical microscope to investigate the dynamics of muscle satellite cells (MuSCs) during the process of muscle r…",
+        "url": "https://phys.org/news/2023-10-microscope-platform-unveil-intricacies-skeletal.html",
+        "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2023/hkust-researchers-deve-2.jpg",
+        "publishedAt": "2023-10-19T15:15:05Z",
+        "content": "Researchers at the Hong Kong University of Science and Technology (HKUST) have created a cutting-edge platform consisting of a dual-laser nonlinear optical microscope to investigate the dynamics of m… [+5394 chars]"
+      },
+      "04008": {
+        "source": {
+          "id": null,
+          "name": "Phys.Org"
+        },
+        "author": "Science X",
+        "title": "New understanding of perfluorooctanoic acid could pave the way towards safer products and better human health",
+        "description": "A team of A*STAR scientists has made a significant breakthrough in understanding how perfluorooctanoic acid (PFOA) is processed by the human body.",
+        "url": "https://phys.org/news/2023-10-perfluorooctanoic-acid-pave-safer-products.html",
+        "urlToImage": "https://scx2.b-cdn.net/gfx/news/2023/new-understanding-of-p.jpg",
+        "publishedAt": "2023-10-03T14:47:04Z",
+        "content": "A team of A*STAR scientists has made a significant breakthrough in understanding how perfluorooctanoic acid (PFOA) is processed by the human body.\r\nLed by Dr. James Chan, Junior Principal Investigato… [+4590 chars]"
+      },
+      "04009": {
+        "source": {
+          "id": null,
+          "name": "ReadWrite"
+        },
+        "author": "Timothy Odutolu",
+        "title": "The Importance of Diversity and Inclusion in Building a Strong Tech Team",
+        "description": "Imagine a tech team where every member feels heard, valued, and empowered. Think of a workspace filled with individuals from […]\nThe post The Importance of Diversity and Inclusion in Building a Strong Tech Team appeared first on ReadWrite.",
+        "url": "https://readwrite.com/the-importance-of-diversity-and-inclusion-in-building-a-strong-tech-team/",
+        "urlToImage": "https://readwrite.com/wp-content/uploads/2023/09/Communication-Trends.jpg",
+        "publishedAt": "2023-09-29T15:00:55Z",
+        "content": "Imagine a tech team where every member feels heard, valued, and empowered. Think of a workspace filled with individuals from diverse backgrounds, each bringing their unique perspectives to the table.… [+13672 chars]"
+      }
+    },
+
+    "sports": {
+      "05000": {
+        "source": {
+          "id": "bleacher-report",
+          "name": "Bleacher Report"
+        },
+        "author": "Zach Buckley",
+        "title": "Hot Takes on Lakers' Roster and 2024 Title Hopes Ahead of NBA Season",
+        "description": "The Los Angeles Lakers hope their productive offseason put them on the NBA championship track. And they just might be right. With LeBron James still hovering…",
+        "url": "https://bleacherreport.com/articles/10091101-hot-takes-on-lakers-roster-and-2024-title-hopes-ahead-of-nba-season",
+        "urlToImage": "https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1695844088/dniaiosfmghqnr09lxg1.jpg",
+        "publishedAt": "2023-09-28T13:00:00Z",
+        "content": "Harry How/Getty Images\r\nThe Lakers will have nights when they can light it up, but this team is built to win with defense. More specifically, it's built to win with dominant defense from Davis.\r\nWhen… [+824 chars]"
+      },
+      "05001": {
+        "source": {
+          "id": "bleacher-report",
+          "name": "Bleacher Report"
+        },
+        "author": "Doric Sam",
+        "title": "Lakers' LeBron James Defends USC's Bronny from Critics: 'Casuals Just Like to Argue'",
+        "description": "Before his son Bronny James begins his freshman season at USC, Los Angeles Lakers star LeBron James is defending him against critics. The 38-year-old took to…",
+        "url": "https://bleacherreport.com/articles/10092924-lakers-lebron-james-defends-uscs-bronny-from-critics-casuals-just-like-to-argue",
+        "urlToImage": "https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1696982191/ijrpq70ejaxvl7kemgf3.jpg",
+        "publishedAt": "2023-10-11T00:15:17Z",
+        "content": "AP Foto/Jay LaPrete\r\nBefore his son Bronny James begins his freshman season at USC, Los Angeles Lakers star LeBron James is defending him against critics.\r\nThe 38-year-old took to social media to cal… [+866 chars]"
+      },
+      "05002": {
+        "source": {
+          "id": "bleacher-report",
+          "name": "Bleacher Report"
+        },
+        "author": "Tyler Conway",
+        "title": "NBA Exec: Spurs Star Victor Wembanyama's 'Peak Will Be a Little After' 5 Years",
+        "description": "Victor Wembanyama may be the most hyped NBA prospect since LeBron James, but that doesn't mean he'll take the league by storm instantly. One NBA executive…",
+        "url": "https://bleacherreport.com/articles/10090983-nba-exec-spurs-star-victor-wembanyamas-peak-will-be-a-little-after-5-years",
+        "urlToImage": "https://media.bleacherreport.com/image/upload/c_fill,g_faces,w_3800,h_2000,q_95/v1695749853/inumecefaux5s1osrfqd.jpg",
+        "publishedAt": "2023-09-26T18:08:29Z",
+        "content": "Brian Babineau/NBAE via Getty Images\r\nVictor Wembanyama may be the most hyped NBA prospect since LeBron James, but that doesn't mean he'll take the league by storm instantly.\r\nOne NBA executive said … [+1227 chars]"
+      },
+      "05003": {
+        "source": {
+          "id": "bleacher-report",
+          "name": "Bleacher Report"
+        },
+        "author": "Francisco Rosa",
+        "title": "Lakers Rumors: LeBron James Has 'Revamped Energy' Headed into 21st NBA Season",
+        "description": "Coming off another sensational year with the Los Angeles Lakers two decades into his NBA career, LeBron James is reportedly entering his 2023-24 campaign with…",
+        "url": "https://bleacherreport.com/articles/10091345-lakers-rumors-lebron-james-has-revamped-energy-headed-into-21st-nba-season",
+        "urlToImage": "https://img.youtube.com/c_fill,g_faces,w_3800,h_2000,q_95/vi/uKn-uGavT5s/0.jpg",
+        "publishedAt": "2023-09-28T19:18:39Z",
+        "content": "Jevone Moore/Icon Sportswire via Getty Images\r\nComing off another sensational year with the Los Angeles Lakers two decades into his NBA career, LeBron James is reportedly entering his 2023-24 campaig… [+639 chars]"
+      },
+      "05004": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "pthompson@insider.com (Polly Thompson)",
+        "title": "Formula 1 could be coming to Apple as it mulls offering up to $2 billion a year to show races, report says",
+        "description": "Apple is considering making a bid for the global Formula 1 rights that would be as much as double their current value, Business F1 reported.",
+        "url": "https://www.businessinsider.com/formula-one-apple-mulls-two-billion-year-offer-rights-mls-2023-10",
+        "urlToImage": "https://i.insider.com/651936145640b20019d795b8?width=1200&format=jpeg",
+        "publishedAt": "2023-10-01T11:53:06Z",
+        "content": "Apple is reportedly considering making a bid of up to $2 billion a year for the rights to show Formula 1 races, according to a report by Business F1.\r\nThe iPhone maker has \"wargamed\" the idea and is … [+2443 chars]"
+      },
+      "05005": {
+        "source": {
+          "id": "espn",
+          "name": "ESPN"
+        },
+        "author": "Associated Press",
+        "title": "Messi sits out third straight game for Inter Miami",
+        "description": "Lionel Messi will sit out his third consecutive Inter Miami game after being scratched from the lineup against NYCFC on Saturday.",
+        "url": "https://www.espn.com/soccer/story/_/id/38531534/lionel-messi-sits-third-straight-game-inter-miami",
+        "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0930%2Fr1232007_1296x729_16%2D9.jpg",
+        "publishedAt": "2023-09-30T23:20:13Z",
+        "content": "Here's how it goes for Inter Miami right now when it comes to the injured Lionel Messi: The team keeps saying he might play, and then he doesn't play.\r\nThat pattern held true again Saturday, when the… [+3786 chars]"
+      },
+      "05006": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "George Glover",
+        "title": "Saudi Arabia is pouring billions into soccer, golf, and Formula 1. Its crown prince doesn't care if anyone calls it 'sportswashing.'",
+        "description": "Saudi Arabia is spending billions on sports, soccer, golf, and Formula 1. Sport is a key part of Mohammed bin Salman's plan to supercharge the Saudi economy.",
+        "url": "https://www.businessinsider.com/saudi-arabia-sports-spending-billions-soccer-golf-formula-one-2023-9",
+        "urlToImage": "https://i.insider.com/6512e8e61c099d0019ad015b?width=1200&format=jpeg",
+        "publishedAt": "2023-09-30T08:55:21Z",
+        "content": "Cristiano Ronaldo signed for Saudi Arabian soccer team Al Nassr in January.Getty Images\r\n<ul>\n<li>Saudi Arabia is pouring billions into sports in a bid to transform its economy.</li>\n<li>Crown Prince… [+7565 chars]"
+      },
+      "05007": {
+        "source": {
+          "id": "espn",
+          "name": "ESPN"
+        },
+        "author": "Charlie Creme",
+        "title": "The 12 nonconference games that will most impact the women's NCAA bracket in March",
+        "description": "From Nov. 6 tipoffs to UConn-South Carolina on Feb. 11, these nonconference games will likely have the biggest influence on the 2023-24 season.",
+        "url": "https://www.espn.com/womens-college-basketball/story/_/id/38679316/women-college-basketball-2023-24-best-nonconference-games",
+        "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0326%2Fr1150095_1296x729_16%2D9.jpg",
+        "publishedAt": "2023-10-19T14:40:25Z",
+        "content": "Rickea Jackson and Tennessee, which is No. 11 in the AP preseason poll, host No. 7 Ohio State on Dec. 3. Eakin Howard/Getty Images\r\nTennessee was probably better than the No. 4 seed it got last year … [+9319 chars]"
+      },
+      "05008": {
+        "source": {
+          "id": "espn",
+          "name": "ESPN"
+        },
+        "author": "Ross Devonport",
+        "title": "Martino confirms Miami to revive Suárez interest",
+        "description": "Inter Miami coach Gerardo \"Tata\" Martino has confirmed his club's continued interest in signing veteran striker Luis Suárez this winter.",
+        "url": "https://www.espn.com/soccer/story/_/id/38696043/martino-confirms-inter-miami-revive-luis-suarez-interest",
+        "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0726%2Fr1202336_2_1296x729_16%2D9.jpg",
+        "publishedAt": "2023-10-19T16:05:48Z",
+        "content": "Oct 19, 2023, 11:42 AM ET\r\nFORT LAUDERDALE, Fla. -- Inter Miami CF head coach Gerardo \"Tata\" Martino has confirmed his club's continued interest in signing veteran striker Luis Suárez this winter.\r\nS… [+3266 chars]"
+      },
+      "05009": {
+        "source": {
+          "id": "espn",
+          "name": "ESPN"
+        },
+        "author": "Scott Van Pelt",
+        "title": "SVP's 'Winners' for Week 8 in college football",
+        "description": "Straight from the TV segment \"SVP Winners,\" Scott Van Pelt breaks down his picks for Week 8 in college football, including Auburn covering at home vs. No. 13 Ole Miss.",
+        "url": "https://www.espn.com/espn/betting/story/_/id/38690158/scott-van-pelt-winners-week-8-college-football-games-svp-2023-picks-auburn-ole-miss",
+        "urlToImage": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2021%2F0702%2Fr875184_3_1296x729_16%2D9.jpg",
+        "publishedAt": "2023-10-19T15:07:08Z",
+        "content": "Remember the confident ... ok, let's be honest ... arrogant man you enjoyed last fall just blowtorching your book with winners that were boundless? Yeah, I don't either. All that's left is this shake… [+3202 chars]"
+      }
+    },
+
+    "tech": {
+      "06000": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Brian Heater",
+        "title": "Apple Watch Series 9 review",
+        "description": "It’s hard to know the right time to upgrade. It’s a question I get a lot, having done this job for as long as I have. It’s the double-edged sword of FOMO: wanting to get your hands on the latest thing as soon as possible, while worrying that next year’s model…",
+        "url": "https://techcrunch.com/2023/09/20/apple-watch-series-9-review/",
+        "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/09/Apple-Watch-Series-9-06.jpg?w=1200",
+        "publishedAt": "2023-09-20T13:00:31Z",
+        "content": "Its hard to know the right time to upgrade. Its a question I get a lot, having done this job for as long as I have. Its the double-edged sword of FOMO: wanting to get your hands on the latest thing a… [+11761 chars]"
+      },
+      "06001": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Zack Whittaker",
+        "title": "Yes, you have to update your Apple devices again, because spyware is bad",
+        "description": "Apple on Thursday released urgent security updates for iPhones, iPads, Macs, Apple Watch, and Safari users to patch against three vulnerabilities that Apple says are being actively exploited. The three vulnerabilities include a flaw in WebKit, the browser eng…",
+        "url": "https://techcrunch.com/2023/09/22/update-apple-devices-pegasus-predator-spyware/",
+        "urlToImage": "https://techcrunch.com/wp-content/uploads/2019/09/iphone_11_pro.jpg?resize=1200,695",
+        "publishedAt": "2023-09-22T17:40:04Z",
+        "content": "Apple on Thursday released urgent security updates for iPhones, iPads, Macs, Apple Watch, and Safari users to patch against three vulnerabilities that Apple says are being actively exploited.\r\nThe th… [+2626 chars]"
+      },
+      "06002": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Brian Heater",
+        "title": "Is the Apple Watch Ultra 2 worth the upgrade?",
+        "description": "The first Apple Watch Ultra was a bold device, in more ways than one. Chief among them may well be the company’s decision to approach a relatively niche market. That’s not to say that there aren’t a lot of outdoorsy types, but the people seeking a product spe…",
+        "url": "https://techcrunch.com/2023/09/20/is-the-apple-watch-ultra-2-worth-the-upgrade/",
+        "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/09/Apple-Watch-Ultra-2-03.jpg?w=1200",
+        "publishedAt": "2023-09-20T13:00:34Z",
+        "content": "The first Apple Watch Ultra was a bold device, in more ways than one. Chief among them may well be the companys decision to approach a relatively niche market. Thats not to say that there arent a lot… [+4891 chars]"
+      },
+      "06003": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Sarah Perez",
+        "title": "Apple Watch’s new double tap gesture is now live in the watchOS 10.1 public beta",
+        "description": "In September, Apple introduced the Apple Watch Series 9 at its annual event, which included a new gesture: the double tap. The gesture, which gives users a new way to interact with their watch, has not yet been publicly available to test, as it isn’t expected…",
+        "url": "https://techcrunch.com/2023/10/04/apple-watchs-new-double-tap-gesture-is-now-live-in-the-watchos-10-1-public-beta/",
+        "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/09/apple-watch-series-9-double-tap-e1694539020989.jpg?w=1200",
+        "publishedAt": "2023-10-04T18:02:44Z",
+        "content": "In September, Apple introduced the Apple Watch Series 9 at its annual event, which included a new gesture: the double tap. The gesture, which gives users a new way to interact with their watch, has n… [+2462 chars]"
+      },
+      "06004": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Ivan Mehta",
+        "title": "How does the Pixel 8 stack up against the iPhone 15",
+        "description": "Google launched the Pixel 8 series on October 4. The company relied on showing Google’s AI prowess as a core selling point. Google’s launch comes weeks after Apple launched its new iPhone 15 series of devices. That’s why we wanted to compare the specification…",
+        "url": "https://techcrunch.com/2023/10/05/how-does-the-pixel-8-stack-up-against-the-iphone-15/",
+        "urlToImage": "https://techcrunch.com/wp-content/uploads/2023/10/Pixel-8-Pro-Camera.jpg?w=1200",
+        "publishedAt": "2023-10-05T13:23:03Z",
+        "content": "Google launched the Pixel 8 series on October 4. The company relied on showing Google’s AI prowess as a core selling point. Google’s launch comes weeks after Apple launched its new iPhone 15 series o… [+3370 chars]"
+      },
+      "06005": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Manish Singh",
+        "title": "Amazon to invest up to $4 billion in AI startup Anthropic",
+        "description": "Amazon has agreed to invest up to $4 billion in the AI startup Anthropic as the e-commerce group steps up rivalry against Microsoft, Meta, Google and Nvidia ...",
+        "url": "https://techcrunch.com/2023/09/25/amazon-to-invest-up-to-4-billion-in-ai-startup-anthropic/",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/3b0p3CM_hla1m9lW70Zbuw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/techcrunch_350/d554c9ae8b521e6447400504b0f0f3cb",
+        "publishedAt": "2023-09-25T07:10:49Z",
+        "content": "Amazon has agreed to invest up to $4 billion in the AI startup Anthropic as the e-commerce group steps up rivalry against Microsoft, Meta, Google and Nvidia in the fast-growing sector that many techn… [+3874 chars]"
+      },
+      "06006": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Paul Sawers",
+        "title": "Phalanx protects company data by automatically securing and tracking sensitive documents",
+        "description": "Data loss prevention (DLP) has emerged as a foundational strategy for businesses looking to prevent workers from inadvertently (or advertently) sharing...",
+        "url": "https://techcrunch.com/2023/09/19/phalanx-protects-company-data-by-automatically-securing-and-tracking-sensitive-documents/",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/lXSw9pm9kBtLAxus1IVFLA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/techcrunch_350/d167fab6fcecd9546657585d73f4ce51",
+        "publishedAt": "2023-09-19T21:04:27Z",
+        "content": "Data loss prevention (DLP) has emerged as a foundational strategy for businesses looking to prevent workers from inadvertently (or advertently) sharing sensitive data outside the confines of the comp… [+7637 chars]"
+      },
+      "06007": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Lauren Forristal",
+        "title": "Former Meta AI VP debuts Sizzle, an AI-powered learning app and chatbot",
+        "description": "Founded by the former vice president of AI at Meta, Jerome Pesenti, Sizzle is a free AI-powered learning app that generates step-by-step answers to math...",
+        "url": "https://techcrunch.com/2023/09/20/former-meta-ai-vp-debuts-sizzle-an-ai-powered-learning-app-and-chatbot/",
+        "urlToImage": "https://media.zenfs.com/en/techcrunch_350/9384f0b3e221976169988321fa2adf58",
+        "publishedAt": "2023-09-20T20:22:42Z",
+        "content": "Founded by the former vice president of AI at Meta, Jerome Pesenti, Sizzle is a free AI-powered learning app that generates step-by-step answers to math equations and word problems. The company recen… [+3210 chars]"
+      },
+      "06008": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Jagmeet Singh",
+        "title": "WhatsApp users in India can now pay businesses with credit card, other UPI apps",
+        "description": "WhatsApp is rolling out a new feature in India that will allow users in its largest market to pay businesses using a variety of payment options from within...",
+        "url": "https://techcrunch.com/2023/09/19/whatsapp-india-payments-businesses/",
+        "urlToImage": "https://media.zenfs.com/en/techcrunch_350/59e540e08fc294cd6050ada3e3b4bef7",
+        "publishedAt": "2023-09-20T05:45:54Z",
+        "content": "WhatsApp is rolling out a new feature in India that will allow users in its largest market to pay businesses using a variety of payment options from within the instant messaging app.\r\nThe Meta-owned … [+2507 chars]"
+      },
+      "06009": {
+        "source": {
+          "id": "techcrunch",
+          "name": "TechCrunch"
+        },
+        "author": "Kyle Wiggers",
+        "title": "Nx lands $16M to build 'monorepo' tools for software devs",
+        "description": "Nx, a startup developing tooling to make it simpler for software dev teams to work within a single code repository, today closed a $16 million Series A round...",
+        "url": "https://techcrunch.com/2023/09/25/nx-lands-16m-to-build-monorepo-tools-for-software-devs/",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/6SEHsRYD8eedCzS_rQRTAA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02MTM-/https://media.zenfs.com/en/techcrunch_350/b5004c8ab82217f2d3a8d805910fd07d",
+        "publishedAt": "2023-09-25T16:00:58Z",
+        "content": "Nx, a startup developing tooling to make it simpler for software dev teams to work within a single code repository, today closed a $16 million Series A round with participation from Nexus Venture Par… [+2675 chars]"
+      }
+    }
+  }
 }
