@@ -1,13 +1,14 @@
 import { Container, Stack, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-import PreferenceBar from '../home/PreferenceBar';
+import { UserContext } from '../../utils/UserContext';
 import ArticleVert from './ArticleVert';
 import FactOfTheDay from './FactOfTheDay';
 import TodayInHistory from './TodayInHistory';
 
-function Explore() {
+export default function Explore() {
+  const { userInfo } = useContext(UserContext);
   const [currentDate, setCurrentDate] = useState(new Date());
 
   useEffect(() => {
@@ -20,7 +21,11 @@ function Explore() {
 
   return (
     <Container>
-      <PreferenceBar />
+      {/* {Object.keys(userInfo).length !== 0 ? (
+        <PreferenceBar preferences={userInfo.preferences} />
+      ) : (
+        <div />
+      )} */}
       <Grid container justifyContent="space-between" alignItems="center">
         <Grid item>
           <Typography
@@ -71,5 +76,3 @@ function Explore() {
     </Container>
   );
 }
-
-export default Explore;

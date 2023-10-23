@@ -9,9 +9,12 @@ import Link from '@mui/material/Link';
 import { useTheme } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// import database from '../../configs/firebase.js';
+import { auth } from '../../configs/firebase';
+import { createNewUserProfile } from '../../utils/UserManager';
 
 function Copyright(props) {
   return (
@@ -31,23 +34,35 @@ function Copyright(props) {
 }
 
 function SignUp() {
+  const navigate = useNavigate();
   const theme = useTheme();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // database
-    //   .ref('user')
-    //   .set({
-    //     email: data.get('email'),
-    //     password: data.get('password'),
-    //   })
-    //   .catch(alert);
 
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('password'),
+    //   username: data.get('userName'),
+    // });
+
+    createUserWithEmailAndPassword(
+      auth,
+      data.get('email'),
+      data.get('password')
+    )
+      .then((userCredential) => {
+        const { user } = userCredential;
+        createNewUserProfile(user, data.get('userName'));
+        navigate('/user/home');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        alert('Unable to Authenticate! Check your details!');
+      });
   };
 
   return (

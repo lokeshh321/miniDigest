@@ -1,4 +1,4 @@
-import { get, off, onValue, ref, update } from 'firebase/database';
+import { get, off, onValue, ref, set, update } from 'firebase/database';
 
 import { db } from '../configs/firebase';
 
@@ -66,4 +66,37 @@ export function stopUserListener(listener) {
   if (listener) {
     off(listener);
   }
+}
+
+export function createNewUserProfile(user, userName) {
+  const age = 21;
+  const country = 'Singapore';
+
+  const userDetails = {
+    username: userName,
+    email: user.email,
+    age,
+    country,
+    profile_pic_url: '',
+    preferences: {
+      all: true,
+      tech: false,
+      science: false,
+      sports: false,
+      business: false,
+      health: false,
+      entertainment: false,
+    },
+    stylise_prompt: '',
+  };
+
+  // post new profile to firebase
+  const dbref = ref(db, `/users/${user.uid}`);
+  set(dbref, userDetails)
+    .then(() => {
+      console.log('created new profile');
+    })
+    .catch((error) => {
+      console.error('Error adding data:', error);
+    });
 }

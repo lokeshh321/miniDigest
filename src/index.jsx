@@ -16,7 +16,6 @@ import Trending from './components/trending/Trending';
 import ErrorPage from './errorPage';
 import theme from './theme';
 import ProtectedRoute from './utils/ProtectedRoute';
-import { UserContextProvider } from './utils/UserContext';
 
 const router = createBrowserRouter([
   {
@@ -40,10 +39,8 @@ const router = createBrowserRouter([
         path: 'user/',
         element: (
           <ProtectedRoute>
-            <UserContextProvider>
-              <Nav />
-              <Outlet />
-            </UserContextProvider>
+            <Nav />
+            <Outlet />
           </ProtectedRoute>
         ),
         children: [

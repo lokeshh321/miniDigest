@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 
 import { UserContext } from '../../utils/UserContext';
 import Greeting from './Greeting';
-import PreferenceBar from './PreferenceBar';
+import HomePreferenceBar from './HomePreferenceBar';
 import StyliseCard from './StyliseCard';
 import SummarySection from './Summary';
 
@@ -13,7 +13,7 @@ export default function Home() {
     <Container maxWidth="xl">
       {Object.keys(userInfo).length !== 0 ? (
         <Stack>
-          <PreferenceBar preferences={userInfo.preferences} />
+          <HomePreferenceBar preferences={userInfo.preferences} />
           <Greeting name={userInfo.username} />
           <Stack direction="row" spacing={3} flex={1}>
             <div style={{ flexBasis: '70%' }}>
