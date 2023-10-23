@@ -1,41 +1,32 @@
 import { Container, Stack } from '@mui/material';
-import { onValue, ref } from 'firebase/database';
-import React, { useMemo, useState } from 'react';
+import React, { useContext } from 'react';
 
-import { db } from '../../configs/firebase';
+import { UserContext } from '../../utils/UserContext';
 import Greeting from './Greeting';
 import PreferenceBar from './PreferenceBar';
 import StyliseCard from './StyliseCard';
 import SummarySection from './Summary';
 
 export default function Home() {
-  const userID = '000';
-  const [userInfo, setUserInfo] = useState({});
-
-  useMemo(() => {
-    const dbref = ref(db, `/users/${userID}`);
-    return onValue(dbref, (snapshot) => {
-      const info = snapshot.val();
-      if (snapshot.exists()) {
-        setUserInfo(info);
-      }
-    });
-  }, [userID]);
-
+  const { userInfo } = useContext(UserContext);
   return (
     <Container maxWidth="xl">
-      <Stack>
-        <PreferenceBar />
-        <Greeting name={userInfo.username} />
-        <Stack direction="row" spacing={3} flex={1}>
-          <div style={{ flexBasis: '70%' }}>
-            <SummarySection />
-          </div>
-          <div style={{ flexBasis: '30%' }}>
-            <StyliseCard />
-          </div>
+      {Object.keys(userInfo).length !== 0 ? (
+        <Stack>
+          <PreferenceBar preferences={userInfo.preferences} />
+          <Greeting name={userInfo.username} />
+          <Stack direction="row" spacing={3} flex={1}>
+            <div style={{ flexBasis: '70%' }}>
+              <SummarySection userInfo={userInfo} />
+            </div>
+            <div style={{ flexBasis: '30%' }}>
+              <StyliseCard />
+            </div>
+          </Stack>
         </Stack>
-      </Stack>
+      ) : (
+        <div />
+      )}
     </Container>
   );
 }

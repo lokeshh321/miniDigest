@@ -1,70 +1,38 @@
 import { Button, Divider, Grid } from '@mui/material';
-import { get, onValue, ref, update } from 'firebase/database';
-import React, { useEffect, useMemo, useState } from 'react';
+import PropTypes from 'prop-types';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 
-import { db } from '../../configs/firebase';
+import { UserContext } from '../../utils/UserContext';
+import { syncUserPreferences } from '../../utils/UserManager';
 
-export default function PreferenceBar() {
-  const [loaded, setLoaded] = useState(false);
-  const [allButtonState, setAllStates] = useState(false);
+export default function PreferenceBar({ preferences }) {
+  const { userID, setRenderUpdate } = useContext(UserContext);
+  const [allButtonState, setAllStates] = useState(preferences.all);
 
   const [buttonStates, setButtonStates] = useState({
-    Tech: false,
-    Science: false,
-    Sports: false,
-    Business: false,
-    Health: false,
-    Entertainment: false,
+    Tech: preferences.tech,
+    Science: preferences.science,
+    Sports: preferences.sports,
+    Business: preferences.business,
+    Health: preferences.health,
+    Entertainment: preferences.entertainment,
   });
 
-  const userID = '000'; // PLACEHOLDER
-
   useEffect(() => {
-    const dbref = ref(db, `/users/${userID}`);
-    return onValue(dbref, (snapshot) => {
-      const info = snapshot.val();
-      if (snapshot.exists()) {
-        setAllStates(info.preferences.all);
-        setButtonStates({
-          Tech: info.preferences.tech,
-          Science: info.preferences.science,
-          Sports: info.preferences.sports,
-          Business: info.preferences.business,
-          Health: info.preferences.health,
-          Entertainment: info.preferences.entertainment,
-        });
-        setLoaded(true);
-      }
-    });
-  }, [loaded]);
+    // if user deselects all categories, automatically select "all"
+    if (Object.values(buttonStates).every((value) => value === false)) {
+      setAllStates(true);
+    }
+  }, [buttonStates, allButtonState]);
 
   const handleButtonChange = () => {
-    // sync preference changes with firebase
-    const userRef = ref(db, `/users/${userID}`);
-
-    get(userRef).then((snapshot) => {
-      if (snapshot.exists()) {
-        const updatePreference = {
-          all: allButtonState,
-          tech: buttonStates.Tech,
-          science: buttonStates.Science,
-          sports: buttonStates.Sports,
-          business: buttonStates.Business,
-          health: buttonStates.Health,
-          entertainment: buttonStates.Entertainment,
-        };
-
-        update(userRef, {
-          preferences: updatePreference,
-        });
-      }
-    });
+    // post changes to firebase
+    syncUserPreferences(userID, buttonStates, allButtonState);
   };
 
   useMemo(() => {
-    if (loaded) {
-      handleButtonChange();
-    }
+    handleButtonChange();
+    setRenderUpdate(true);
   }, [buttonStates, allButtonState]);
 
   const toggleAll = () => {
@@ -169,3 +137,15 @@ export default function PreferenceBar() {
     </Grid>
   );
 }
+
+PreferenceBar.propTypes = {
+  preferences: PropTypes.shape({
+    all: PropTypes.bool,
+    tech: PropTypes.bool,
+    science: PropTypes.bool,
+    sports: PropTypes.bool,
+    business: PropTypes.bool,
+    health: PropTypes.bool,
+    entertainment: PropTypes.bool,
+  }).isRequired,
+};
