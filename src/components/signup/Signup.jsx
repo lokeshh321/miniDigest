@@ -1,12 +1,9 @@
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
-import { useTheme } from '@mui/material/styles';
+import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -16,36 +13,12 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../../configs/firebase';
 import { createNewUserProfile } from '../../utils/UserManager';
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        MiniDigest
-      </Link>{' '}
-      {new Date().getFullYear()}.
-    </Typography>
-  );
-}
-
 function SignUp() {
   const navigate = useNavigate();
-  const theme = useTheme();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-
-    // console.log({
-    //   email: data.get('email'),
-    //   password: data.get('password'),
-    //   username: data.get('userName'),
-    // });
 
     createUserWithEmailAndPassword(
       auth,
@@ -66,85 +39,115 @@ function SignUp() {
   };
 
   return (
-    <Container maxWidth="xs">
-      <CssBaseline />
+    <Container disableGutters maxWidth={false} overflowX="hidden">
       <Box
         sx={{
-          marginTop: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          backgroundImage: 'url(assets/background.png)',
+          backgroundPosition: 'center',
+          margin: 'auto',
+          width: '100%',
+          height: '100vh',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <Stack
+        paddingLeft={10}
+        paddingTop={8}
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: '2%',
+          zIndex: 1,
+          width: '40%',
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: theme.palette.secondary.main }}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Start Digesting Today!
-        </Typography>
-        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                autoComplete="given-name"
-                name="userName"
-                required
-                fullWidth
-                id="userName"
-                label="Username"
-                autoFocus
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                id="reemail"
-                label="Re-enter Email Address"
-                name="reemail"
-                autoComplete="reemail"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="new-password"
-              />
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
-            Sign Up
-          </Button>
-          <Grid container justifyContent="flex-end">
-            <Grid item>
-              <Link href="/login" variant="body2">
-                Already have an account? Sign in
-              </Link>
-            </Grid>
-          </Grid>
+        <Box
+          sx={{
+            alignItems: 'flex-end',
+            height: '50px',
+            objectFit: 'cover',
+            paddingBottom: '130px',
+          }}
+        >
+          <img src="assets/minidigest_logo.png" alt="logo" width={300} />
         </Box>
-      </Box>
-      <Copyright sx={{ mt: 5 }} />
+
+        <Stack paddingLeft={0}>
+          <Stack direction="row" spacing={5}>
+            <Typography variant="h5">
+              Create an Account. Start Your Digest!
+            </Typography>
+          </Stack>
+
+          <Box
+            component="form"
+            noValidate
+            onSubmit={handleSubmit}
+            sx={{ mt: 3 }}
+          >
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  autoComplete="given-name"
+                  name="userName"
+                  required
+                  fullWidth
+                  id="userName"
+                  label="Username"
+                  autoFocus
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="reemail"
+                  label="Re-enter Email Address"
+                  name="reemail"
+                  autoComplete="reemail"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="new-password"
+                />
+              </Grid>
+            </Grid>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Sign Up
+            </Button>
+            <Grid container justifyContent="flex-end">
+              <Grid item>
+                <Link href="/login" variant="body2">
+                  Already have an account? Sign in
+                </Link>
+              </Grid>
+            </Grid>
+          </Box>
+        </Stack>
+      </Stack>
     </Container>
   );
 }
