@@ -1,25 +1,46 @@
 import { Button, Divider, Grid } from '@mui/material';
-import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 
-export default function PreferenceBar() {
-  const [allButtonState, setAllStates] = useState(false);
+import { UserContext } from '../../utils/UserContext';
+import { syncUserPreferences } from '../../utils/UserManager';
+
+export default function PreferenceBar({ preferences }) {
+  const { userID, setRenderUpdate } = useContext(UserContext);
+  const [allButtonState, setAllStates] = useState(preferences.all);
 
   const [buttonStates, setButtonStates] = useState({
-    Tech: false,
-    Science: false,
-    Sports: false,
-    Business: false,
-    Health: false,
-    Entertainment: false,
+    Tech: preferences.tech,
+    Science: preferences.science,
+    Sports: preferences.sports,
+    Business: preferences.business,
+    Health: preferences.health,
+    Entertainment: preferences.entertainment,
   });
+
+  useEffect(() => {
+    // if user deselects all categories, automatically select "all"
+    if (Object.values(buttonStates).every((value) => value === false)) {
+      setAllStates(true);
+    }
+  }, [buttonStates, allButtonState]);
+
+  const handleButtonChange = () => {
+    // post changes to firebase
+    syncUserPreferences(userID, buttonStates, allButtonState);
+  };
+
+  useMemo(() => {
+    handleButtonChange();
+    setRenderUpdate(true);
+  }, [buttonStates, allButtonState]);
 
   const toggleAll = () => {
     setAllStates(!allButtonState);
 
     // reset all other buttons
     if (!allButtonState) {
-      setButtonStates((prevState) => ({
-        ...prevState,
+      setButtonStates(() => ({
         Tech: false,
         Science: false,
         Sports: false,
@@ -28,8 +49,6 @@ export default function PreferenceBar() {
         Entertainment: false,
       }));
     }
-
-    // post changes to firebase here
   };
 
   const toggleButton = (buttonName) => {
@@ -42,8 +61,6 @@ export default function PreferenceBar() {
     if (allButtonState) {
       toggleAll();
     }
-
-    // post changes to firebase here
   };
 
   return (
@@ -56,7 +73,7 @@ export default function PreferenceBar() {
     >
       <Grid item>
         <Button
-          key={allButtonState.uniqueId}
+          key={allButtonState}
           onClick={() => toggleAll()}
           variant={allButtonState ? 'contained' : 'string'}
           disableRipple
@@ -94,8 +111,10 @@ export default function PreferenceBar() {
       {Object.keys(buttonStates).map((buttonName) => (
         <Grid item key={buttonName.valueOf()}>
           <Button
-            key={buttonName.uniqueId}
-            onClick={() => toggleButton(buttonName)}
+            key={buttonName}
+            onClick={() => {
+              toggleButton(buttonName);
+            }}
             variant={buttonStates[buttonName] ? 'contained' : 'string'}
             disableRipple
             style={{
@@ -118,3 +137,15 @@ export default function PreferenceBar() {
     </Grid>
   );
 }
+
+PreferenceBar.propTypes = {
+  preferences: PropTypes.shape({
+    all: PropTypes.bool,
+    tech: PropTypes.bool,
+    science: PropTypes.bool,
+    sports: PropTypes.bool,
+    business: PropTypes.bool,
+    health: PropTypes.bool,
+    entertainment: PropTypes.bool,
+  }).isRequired,
+};

@@ -1,0 +1,21 @@
+{
+  "users": {
+    "000": {
+      "username": "John",
+      "email": "abc@gmail.com",
+      "age": 30,
+      "country": "Singapore",
+      "profile_pic_url": "",
+      "preferences": {
+        "all": true,
+        "tech": false,
+        "science": false,
+        "sports": false,
+        "business": false,
+        "health": false,
+        "entertainment": false
+      },
+      "stylise_prompt": ""
+    }
+  }
+}

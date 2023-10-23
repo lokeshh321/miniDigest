@@ -1,45 +1,56 @@
-import { Box } from '@mui/material';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { Button, Stack, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Landing() {
   return (
-    <Box
-      sx={{
-        backgroundImage: 'url("assets/landing_bg4.jpg")',
-        backgroundPosition: 'left bottom',
-        // backgroundRepeat: 'no-repeat',
-        // backgroundSize: '300px 300px',
-        height: '100%',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        display: 'flex',
-        flexWrap: 'nowrap',
-      }}
-    >
-      {/* Style = {{
-        backgroundImage:
-      }} */}
+    <Container disableGutters maxWidth={false} overflowX="hidden">
+      <Box
+        sx={{
+          backgroundImage: 'url(assets/background.png)',
+          backgroundPosition: 'center',
+          margin: 'auto',
+          width: '100%',
+          height: '100vh',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
 
-      <Stack spacing={5} padding={10}>
+      <Stack
+        paddingLeft={10}
+        paddingTop={8}
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          zIndex: 1,
+          width: '60%',
+        }}
+      >
         <Box
-          sx={{ alignItems: 'flex-end', height: '50px', objectFit: 'cover' }}
+          sx={{
+            alignItems: 'flex-end',
+            height: '50px',
+            objectFit: 'cover',
+            paddingBottom: '180px',
+          }}
         >
           <img src="assets/minidigest_logo.png" alt="logo" width={300} />
         </Box>
-        <Typography variant="h1" gutterBottom>
-          Digest Your Daily Dose of News
+
+        <Typography variant="h1">
+          Your Daily <br />
+          Dose of News
         </Typography>
 
-        <Typography variant="h3" gutterBottom>
-          Your daily news bites in just one minute.
+        <Typography variant="h4" gutterBottom sx={{ fontSize: '25px' }}>
+          Concise, Readable, Fast, and Personalised for you.
         </Typography>
 
-        <Stack spacing={2} direction="row">
+        <Stack spacing={2} direction="row" paddingTop={2}>
           <Button
             component={Link}
             to="/signup"
@@ -58,13 +69,8 @@ function Landing() {
           </Button>
         </Stack>
       </Stack>
-      <Box padding={5} sx={{ justifyContent: 'flex-end', alignItems: 'right' }}>
-        <img src="assets/landing_image.jpg" alt="old looking background" />
-      </Box>
-    </Box>
+    </Container>
   );
-
-  // return <div>Landing Page</div>;
 }
 
 export default Landing;

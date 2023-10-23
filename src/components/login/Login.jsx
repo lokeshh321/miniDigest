@@ -9,7 +9,11 @@ import Link from '@mui/material/Link';
 import { useTheme } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import { auth } from '../../configs/firebase';
 
 function Copyright(props) {
   return (
@@ -29,7 +33,9 @@ function Copyright(props) {
 }
 
 function Login() {
+  const navigate = useNavigate();
   const theme = useTheme();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -37,6 +43,17 @@ function Login() {
       email: data.get('email'),
       password: data.get('password'),
     });
+    signInWithEmailAndPassword(auth, data.get('email'), data.get('password'))
+      .then((userCredential) => {
+        const { user } = userCredential;
+        navigate('/user/home');
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
   };
 
   return (
@@ -61,10 +78,10 @@ function Login() {
             margin="normal"
             required
             fullWidth
-            id="username"
-            label="Username"
-            name="username"
-            autoComplete="username"
+            id="email"
+            label="Email"
+            name="email"
+            autoComplete="email"
             autoFocus
           />
           <TextField
