@@ -66,13 +66,16 @@ export default function Nav() {
 
   return (
     <AppBar
-      color="transparent"
+      // color="transparent"
       position="static"
       sx={{
         boxShadow: 'none',
         borderBottom: '1px solid #dee2e6',
         height: '6rem',
-        marginTop: '2rem',
+        paddingTop: '0.5rem',
+        zIndex: 2,
+        display: 'flex',
+        backgroundColor: 'white',
       }}
     >
       <Container width="xm">

@@ -11,7 +11,7 @@ export default function Explore() {
   const { userInfo } = useContext(UserContext);
 
   return (
-    <Container width="xm">
+    <Container width="xm" style={{ marginTop: '1rem' }}>
       {/* {Object.keys(userInfo).length !== 0 ? (
         <PreferenceBar preferences={userInfo.preferences} />
       ) : (
