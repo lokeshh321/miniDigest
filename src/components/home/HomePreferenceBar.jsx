@@ -5,7 +5,7 @@ import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { UserContext } from '../../utils/UserContext';
 import { syncUserPreferences } from '../../utils/UserManager';
 
-export default function PreferenceBar({ preferences }) {
+export default function HomePreferenceBar({ preferences }) {
   const { userID, setRenderUpdate } = useContext(UserContext);
   const [allButtonState, setAllStates] = useState(preferences.all);
 
@@ -68,7 +68,7 @@ export default function PreferenceBar({ preferences }) {
       container
       spacing={5}
       paddingTop={5}
-      paddingBottom={5}
+      paddingBottom={3}
       justifyContent="center"
     >
       <Grid item>
@@ -138,7 +138,7 @@ export default function PreferenceBar({ preferences }) {
   );
 }
 
-PreferenceBar.propTypes = {
+HomePreferenceBar.propTypes = {
   preferences: PropTypes.shape({
     all: PropTypes.bool,
     tech: PropTypes.bool,

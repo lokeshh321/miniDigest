@@ -1,36 +1,17 @@
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
+import Stack from '@mui/material/Stack';
 import { useTheme } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 import { auth } from '../../configs/firebase';
-
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        MiniDigest
-      </Link>{' '}
-      {new Date().getFullYear()}.
-    </Typography>
-  );
-}
 
 function Login() {
   const navigate = useNavigate();
@@ -39,39 +20,56 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
     signInWithEmailAndPassword(auth, data.get('email'), data.get('password'))
       .then((userCredential) => {
         const { user } = userCredential;
         navigate('/user/home');
-        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
+        alert('Unable to Authenticate! Check your details!');
       });
   };
 
   return (
-    <Container maxWidth="xs">
-      <CssBaseline />
+    <Container disableGutters maxWidth={false} overflowX="hidden">
       <Box
         sx={{
-          marginTop: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          backgroundImage: 'url(assets/background.png)',
+          backgroundPosition: 'center',
+          margin: 'auto',
+          width: '100%',
+          height: '100vh',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <Stack
+        paddingLeft={10}
+        paddingTop={8}
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: '2%',
+          zIndex: 1,
+          width: '40%',
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: theme.palette.primary.main }}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Your Daily Digest Awaits
+        <Box
+          sx={{
+            alignItems: 'flex-end',
+            height: '50px',
+            objectFit: 'cover',
+            paddingBottom: '170px',
+          }}
+        >
+          <img src="assets/minidigest_logo.png" alt="logo" width={300} />
+        </Box>
+        <Typography width="60vw" variant="h5">
+          Login to Your Account. Your Digest Awaits!
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
@@ -105,18 +103,18 @@ function Login() {
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
+                {/* handle forget password here */}
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/signup" variant="body2">
+              <Link component={RouterLink} to="/signup" variant="body2">
                 Don't have an account? Sign Up
               </Link>
             </Grid>
           </Grid>
         </Box>
-      </Box>
-      <Copyright sx={{ mt: 8, mb: 4 }} />
+      </Stack>
     </Container>
   );
 }

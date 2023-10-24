@@ -1,4 +1,4 @@
-import { createContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useMemo, useState } from 'react';
 
 import {
   createUserListener,
@@ -8,21 +8,21 @@ import {
 
 const UserContext = createContext();
 
-function UserContextProvider({ children }) {
-  const [userID, setUserID] = useState('000');
+function UserContextProvider({ user, children }) {
+  const [userID, setUserID] = useState(user.uid);
   const [userInfo, setUserInfo] = useState({});
   const [requireRender, setRenderUpdate] = useState(false);
   const [responseMsg, setResponseMsg] = useState('');
 
   // Fetch user data
-  useEffect(() => {
+  useMemo(() => {
     fetchUserData(userID).then((info) => {
       setUserInfo(info);
     });
   }, [userID]);
 
   // listen to changes on for user data
-  useEffect(() => {
+  useMemo(() => {
     const listener = createUserListener(userID, (updatedUserData) => {
       setUserInfo(updatedUserData);
     });

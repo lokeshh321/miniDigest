@@ -25,7 +25,7 @@ function Landing() {
         sx={{
           position: 'absolute',
           top: 0,
-          left: 0,
+          left: '2%',
           zIndex: 1,
           width: '60%',
         }}
@@ -35,7 +35,7 @@ function Landing() {
             alignItems: 'flex-end',
             height: '50px',
             objectFit: 'cover',
-            paddingBottom: '180px',
+            paddingBottom: '130px',
           }}
         >
           <img src="assets/minidigest_logo.png" alt="logo" width={300} />

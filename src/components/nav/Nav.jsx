@@ -10,33 +10,42 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { auth } from '../../configs/firebase';
 
 const pages = [
   {
     name: 'Home',
-    href: 'home/',
+    href: 'home',
   },
   {
     name: 'Trending',
-    href: 'trending/',
+    href: 'trending',
   },
   {
     name: 'Explore',
-    href: 'explore/',
-  },
-  {
-    name: 'Signup',
-    href: 'signup/',
-  },
-  {
-    name: 'Login',
-    href: 'login/',
+    href: 'explore',
   },
 ];
 
 export default function Nav() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        navigate('/');
+        console.log('Signed out successfully');
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -57,22 +66,25 @@ export default function Nav() {
 
   return (
     <AppBar
-      color="transparent"
+      // color="transparent"
       position="static"
       sx={{
         boxShadow: 'none',
         borderBottom: '1px solid #dee2e6',
         height: '6rem',
-        marginTop: '2rem',
+        paddingTop: '0.5rem',
+        zIndex: 2,
+        display: 'flex',
+        backgroundColor: 'white',
       }}
     >
-      <Container maxWidth="xl">
+      <Container width="xm">
         <Toolbar disableGutters>
           <Typography
             variant="h5"
             noWrap
             component={Link}
-            to="/"
+            to="/user/home"
             sx={{
               mr: 8,
               display: { xs: 'none', md: 'flex' },
@@ -134,7 +146,7 @@ export default function Nav() {
             variant="h5"
             noWrap
             component={Link}
-            to="/"
+            to="/user/home"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -210,14 +222,14 @@ export default function Nav() {
                 <Typography
                   textAlign="center"
                   component={Link}
-                  to="/profile"
+                  to="/user/profile"
                   style={{ textDecoration: 'none' }}
                   color="black"
                 >
                   Profile
                 </Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseUserMenu}>
+              <MenuItem onClick={handleCloseUserMenu && handleLogout}>
                 <Typography
                   textAlign="center"
                   component={Link}
