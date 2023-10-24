@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 import { auth } from '../../configs/firebase';
 
@@ -103,11 +103,12 @@ function Login() {
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
+                {/* handle forget password here */}
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/signup" variant="body2">
+              <Link component={RouterLink} to="/signup" variant="body2">
                 Don't have an account? Sign Up
               </Link>
             </Grid>

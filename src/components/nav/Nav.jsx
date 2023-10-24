@@ -75,7 +75,7 @@ export default function Nav() {
         marginTop: '2rem',
       }}
     >
-      <Container maxWidth="xl">
+      <Container width="xm">
         <Toolbar disableGutters>
           <Typography
             variant="h5"

@@ -1,5 +1,6 @@
 import './Profile.css'; // Import the CSS file
 
+import { Container } from '@mui/material';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import React, { useState } from 'react';
@@ -51,9 +52,9 @@ function Profile() {
   const existenceDuration = calculateExistenceDuration();
 
   return (
-    <div>
+    <Container width="xm">
       {/* Stylish Text */}
-      <div className="stylish-text-container">
+      {/* <div className="stylish-text-container">
         <p className="stylish-text">
           Tell us more! We hope to provide you with more customized content.
         </p>
@@ -61,7 +62,7 @@ function Profile() {
           <div className="snowflake">❅</div>
           <div className="snowflake">❆</div>
         </div>
-      </div>
+      </div> */}
 
       {/* Profile Container */}
       <div className="profile-container">
@@ -132,7 +133,7 @@ function Profile() {
           {`${existenceDuration} days since you've started digesting`}
         </p>
       </div>
-    </div>
+    </Container>
   );
 }
 

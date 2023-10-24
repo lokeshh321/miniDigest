@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 import { auth } from '../../configs/firebase';
 import { createNewUserProfile } from '../../utils/UserManager';
@@ -140,7 +140,7 @@ function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/login" variant="body2">
+                <Link component={RouterLink} to="/login" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
