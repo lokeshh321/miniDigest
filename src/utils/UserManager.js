@@ -95,6 +95,13 @@ export function createNewUserProfile(user, userName) {
   const age = 21;
   const country = 'Singapore';
 
+  // get registration date in YYYY-MM-DD format
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const formattedDate = `${year}-${month}-${day}`;
+
   const userDetails = {
     username: userName,
     email: user.email,
@@ -111,6 +118,7 @@ export function createNewUserProfile(user, userName) {
       entertainment: false,
     },
     stylise_prompt: '',
+    registration_date: formattedDate,
   };
 
   // post new profile to firebase

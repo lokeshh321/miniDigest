@@ -86,7 +86,7 @@ function processFetchedArticles(articles) {
   return extractedArticles;
 }
 
-export default async function fetchArticles(preferences, numToSummarise) {
+export async function fetchArticles(preferences, numToSummarise) {
   // allocate 10 articles evenly
   const allocatedPref = allocateCategories(preferences, numToSummarise);
 
@@ -94,6 +94,20 @@ export default async function fetchArticles(preferences, numToSummarise) {
     const contentToSummarise = await fetchAllArticles(allocatedPref);
     const processedArticles = processFetchedArticles(contentToSummarise);
     return processedArticles;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
+
+export async function fetchTrendingArticles(numToSummarise) {
+  const allocatedPref = {
+    trending: numToSummarise,
+  };
+
+  try {
+    const fetchedArticles = await fetchAllArticles(allocatedPref);
+    return fetchedArticles;
   } catch (error) {
     console.error(error);
     return [];

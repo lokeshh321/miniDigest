@@ -1,4 +1,4 @@
-import fetchArticles from './ArticleManager';
+import { fetchArticles } from './ArticleManager';
 
 export default async function generateSummarisePrompt(userInfo) {
   try {
