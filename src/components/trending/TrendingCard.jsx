@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 export default function TrendingCard() {
   return (
     <Container width="xl">
-      <Card sx={{ marginY: 2 }}>
+      <Card sx={{ marginY: 2 }} variant="outlined">
         <Stack direction="row" paddingBottom={2}>
           <Box padding={4} alignSelf="center">
             <img
@@ -15,7 +15,7 @@ export default function TrendingCard() {
               alt="filler"
               style={{
                 width: '30vw',
-                borderRadius: 20,
+                borderRadius: 10,
                 overflow: 'hidden',
               }}
             />
@@ -30,7 +30,7 @@ export default function TrendingCard() {
               Why Egypt remains reluctant to open Rafah crossing to Gaza
             </Typography>
             <Stack
-              color="primary.lightGrey"
+              color="primary.darkGrey"
               direction="row"
               paddingBottom={2}
               spacing={2}

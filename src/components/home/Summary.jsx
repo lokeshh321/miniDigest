@@ -1,7 +1,8 @@
-import { Card, Typography } from '@mui/material';
+import { Card, Skeleton, Typography } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react';
+import { Stack } from 'react-bootstrap';
 
-import { streamSummaryResponse } from '../../utils/LLMQuerier';
+import streamSummaryResponse from '../../utils/LLMQuerier';
 import { getCachedSummary } from '../../utils/LocalStorageManager';
 import { UserContext } from '../../utils/UserContext';
 
@@ -34,10 +35,22 @@ export default function SummarySection({ userInfo }) {
   }, [rendered, controller, userInfo]);
 
   return (
-    <Card sx={{ padding: 5, flexBasis: '75%' }}>
-      <Typography sx={{ fontSize: '20px', lineHeight: 2.2 }}>
-        {responseMsg}
-      </Typography>
+    <Card
+      variant="outlined"
+      sx={{ borderRadius: 4, padding: 5, flexBasis: '75%' }}
+    >
+      {responseMsg !== '' ? (
+        <Typography sx={{ fontSize: '20px', lineHeight: 2.2 }}>
+          {responseMsg}
+        </Typography>
+      ) : (
+        <Stack>
+          <Skeleton height="50px" animation="wave" />
+          <Skeleton height="50px" animation="wave" />
+          <Skeleton height="50px" animation="wave" />
+          <Skeleton height="50px" animation="wave" />
+        </Stack>
+      )}
     </Card>
   );
 }

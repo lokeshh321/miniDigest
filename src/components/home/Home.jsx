@@ -8,9 +8,9 @@ import StyliseCard from './StyliseCard';
 import SummarySection from './Summary';
 
 export default function Home() {
-  const { userInfo } = useContext(UserContext);
+  const { userID, userInfo } = useContext(UserContext);
   return (
-    <Container width="xm">
+    <Container width="xm" style={{ marginBottom: '5rem' }}>
       {Object.keys(userInfo).length !== 0 ? (
         <Stack>
           <HomePreferenceBar preferences={userInfo.preferences} />
@@ -20,7 +20,7 @@ export default function Home() {
               <SummarySection userInfo={userInfo} />
             </div>
             <div style={{ flexBasis: '30%' }}>
-              <StyliseCard />
+              <StyliseCard userID={userID} userInfo={userInfo} />
             </div>
           </Stack>
         </Stack>

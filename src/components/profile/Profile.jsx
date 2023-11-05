@@ -53,18 +53,6 @@ function Profile() {
 
   return (
     <Container width="xm">
-      {/* Stylish Text */}
-      {/* <div className="stylish-text-container">
-        <p className="stylish-text">
-          Tell us more! We hope to provide you with more customized content.
-        </p>
-        <div className="snowflakes" aria-hidden="true">
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-        </div>
-      </div> */}
-
-      {/* Profile Container */}
       <div className="profile-container">
         <div className="profile-picture">
           <img src={user.profileImageUrl} alt="Profile" />
@@ -83,22 +71,35 @@ function Profile() {
               <TextField
                 id="filled-username"
                 label="Username"
-                variant="filled"
+                variant="outlined"
                 value={editedUsername}
+                error={editedUsername === ''}
+                helperText={editedUsername === '' ? 'Empty field!' : ' '}
                 onChange={(e) => setEditedUsername(e.target.value)}
+                sx={{ paddingRight: 5 }}
               />
               <TextField
                 id="filled-age"
                 label="Age"
-                variant="filled"
+                variant="outlined"
                 type="number"
                 value={editedAge}
+                error={editedAge === '' || editedAge <= 1}
+                helperText={
+                  editedAge === ''
+                    ? 'Empty field!'
+                    : editedAge <= 1
+                    ? 'Invalid age!'
+                    : ' '
+                }
                 onChange={(e) => setEditedAge(parseInt(e.target.value))}
               />
               <TextField
                 id="filled-country"
                 label="Country"
-                variant="filled"
+                variant="outlined"
+                error={editedCountry === ''}
+                helperText={editedCountry === '' ? 'Empty field!' : ' '}
                 value={editedCountry}
                 onChange={(e) => setEditedCountry(e.target.value)}
               />

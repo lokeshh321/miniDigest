@@ -10,20 +10,20 @@ const openai = new OpenAIApi({
   dangerouslyAllowBrowser: true,
 });
 
-export async function streamSummaryResponse(
+export default async function streamSummaryResponse(
   userInfo,
   setResponseMsg,
   controller
 ) {
   setResponseMsg('');
-  const prompt = generateSummarisePrompt(userInfo);
   let currentMsg = '';
+  const prompt = await generateSummarisePrompt(userInfo);
+
   const completion = await openai.chat.completions.create(
     {
       model: 'gpt-3.5-turbo',
       messages: prompt,
       stream: true,
-      max_tokens: 200,
     },
     { signal: controller.signal }
   );

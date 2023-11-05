@@ -1,10 +1,16 @@
 import { TextareaAutosize as BaseTextareaAutosize } from '@mui/base/TextareaAutosize';
-import { Card, Typography } from '@mui/material';
+import { Button, Card, Typography } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/system';
-import React from 'react';
+import React, { useContext } from 'react';
 
-export default function StyliseCard() {
+import { UserContext } from '../../utils/UserContext';
+import { updateUserInfo } from '../../utils/UserManager';
+
+export default function StyliseCard({ userID, userInfo }) {
+  const { setRenderUpdate } = useContext(UserContext);
+  let textInput = userInfo.stylise_prompt;
+
   const blue = {
     100: '#DAECFF',
     200: '#b6daff',
@@ -63,20 +69,42 @@ export default function StyliseCard() {
       `
   );
 
+  const updateStylise = () => {
+    // change stylise prompt on firebase
+    updateUserInfo(userID, 'stylise_prompt', textInput);
+    setRenderUpdate(true);
+  };
+
   return (
     <Stack>
       <Typography
         textAlign="center"
         sx={{ paddingTop: 5, paddingBottom: 2, fontSize: '20px' }}
       >
-        Stylise Your News!
+        Stylise your news!
       </Typography>
-      <Card sx={{ padding: 5 }}>
-        <Textarea
-          aria-label="stylise details"
-          minRows={5}
-          placeholder="Input Custom Prompts to Further Personalise your Daily News!"
-        />
+      <Card variant="outlined" sx={{ padding: 5, borderRadius: 4 }}>
+        <Stack spacing={3} alignItems="center">
+          <Textarea
+            aria-label="stylise details"
+            minRows={5}
+            defaultValue={
+              userInfo.stylise_prompt === '' ? '' : userInfo.stylise_prompt
+            }
+            placeholder="Input custom prompts to further personalise your daily news!"
+            onChange={(event) => {
+              textInput = event.target.value;
+            }}
+          />
+          <Button
+            color="secondary"
+            variant="outlined"
+            style={{ width: '50%' }}
+            onClick={updateStylise}
+          >
+            Update
+          </Button>
+        </Stack>
       </Card>
     </Stack>
   );
