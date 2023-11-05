@@ -48,6 +48,29 @@ export function syncUserPreferences(userID, buttonStates, allButtonState) {
   });
 }
 
+export function updateUserInfo(userID, infoField, updatedValue) {
+  const userRef = ref(db, `/users/${userID}`);
+
+  return new Promise((resolve, reject) => {
+    get(userRef)
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          return update(userRef, {
+            [infoField]: updatedValue,
+          });
+        }
+        reject(new Error('User data not found'));
+        return null;
+      })
+      .then(() => {
+        resolve('Data updated successfully');
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
 // Create a listener on database for a specific user
 export function createUserListener(userID, callback) {
   const dbRef = ref(db, `/users/${userID}`);
@@ -72,6 +95,13 @@ export function createNewUserProfile(user, userName) {
   const age = 21;
   const country = 'Singapore';
 
+  // get registration date in YYYY-MM-DD format
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const formattedDate = `${year}-${month}-${day}`;
+
   const userDetails = {
     username: userName,
     email: user.email,
@@ -88,6 +118,7 @@ export function createNewUserProfile(user, userName) {
       entertainment: false,
     },
     stylise_prompt: '',
+    registration_date: formattedDate,
   };
 
   // post new profile to firebase

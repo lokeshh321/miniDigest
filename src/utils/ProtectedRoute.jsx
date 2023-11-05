@@ -17,7 +17,6 @@ export function useAuth() {
 export default function ProtectedRoute({ children }) {
   const navigate = useNavigate();
   const user = useAuth();
-  console.log(user);
   return user === 'undefined' ? (
     <h1>Loading....</h1>
   ) : user ? (

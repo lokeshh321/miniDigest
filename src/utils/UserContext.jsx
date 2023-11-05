@@ -14,7 +14,7 @@ function UserContextProvider({ user, children }) {
   const [requireRender, setRenderUpdate] = useState(false);
   const [responseMsg, setResponseMsg] = useState('');
 
-  // Fetch user data
+  // fetch user data
   useMemo(() => {
     fetchUserData(userID).then((info) => {
       setUserInfo(info);

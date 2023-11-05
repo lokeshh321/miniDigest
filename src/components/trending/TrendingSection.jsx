@@ -6,13 +6,22 @@ import 'swiper/css/scrollbar';
 
 import { Button } from '@mui/material';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import React from 'react';
-import { Navigation, Pagination } from 'swiper/modules';
+import React, { useMemo, useState } from 'react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { fetchTrendingArticles } from '../../utils/ArticleManager';
 import TrendingCard from './TrendingCard';
 
 export default function TrendingSection() {
+  const [trendingArticles, setArticles] = useState([]);
+
+  useMemo(() => {
+    fetchTrendingArticles(5).then((info) => {
+      setArticles(info);
+    });
+  }, []);
+
   return (
     <section className=" projects hidden md:block" id="projects">
       <div className="flex projects__container">
@@ -34,6 +43,10 @@ export default function TrendingSection() {
             nextEl: '.projects__swiper-next',
             prevEl: '.projects__swiper-prev',
           }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             576: {
               slidesPerView: 1,
@@ -43,19 +56,13 @@ export default function TrendingSection() {
               spaceBetween: 12,
             },
           }}
-          modules={[Pagination, Navigation]}
+          modules={[Autoplay, Pagination, Navigation]}
         >
-          {/* {articles.map((course) => ( */}
-          <SwiperSlide>
-            <TrendingCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TrendingCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TrendingCard />
-          </SwiperSlide>
-          {/* ))} */}
+          {trendingArticles.map((article) => (
+            <SwiperSlide>
+              <TrendingCard article={article} />
+            </SwiperSlide>
+          ))}
         </Swiper>
         <Button
           className="projects__swiper-next"

@@ -1,46 +1,90 @@
 import './Profile.css'; // Import the CSS file
 
-import { Container } from '@mui/material';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Container, Stack } from '@mui/material';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import React, { useState } from 'react';
+import {
+  EmailAuthProvider,
+  reauthenticateWithCredential,
+  updateEmail,
+  updatePassword,
+} from 'firebase/auth';
+import React, { useContext, useState } from 'react';
+
+import { auth } from '../../configs/firebase';
+import { UserContext } from '../../utils/UserContext';
+import { updateUserInfo } from '../../utils/UserManager';
 
 function Profile() {
-  // Sample user data (you can replace this with your actual data)
-  const [user, setUser] = useState({
-    username: 'JohnDoe',
-    age: 30,
-    country: 'United States',
-    // You can replace the 'profileImageUrl' with the actual image URL.
-    profileImageUrl:
-      'https://kingchoice.me/media/CACHE/images/f8eafe2ea6bc830e9ea548af6e67cb3c_ov9i5Q7/e929857f3a96b9c0779601c019be1ddc.jpg',
-    registrationDate: '2023-01-01',
-  });
+  const { userID, userInfo } = useContext(UserContext);
+  const [editedUsername, setEditedUsername] = useState(userInfo.username);
+  const [editedAge, setEditedAge] = useState(userInfo.age);
+  const [editedCountry, setEditedCountry] = useState(userInfo.country);
+  const [editedEmail, setEditedEmail] = useState(userInfo.email);
 
-  // State variables to track edited user information
-  const [editedUsername, setEditedUsername] = useState(user.username);
-  const [editedAge, setEditedAge] = useState(user.age);
-  const [editedCountry, setEditedCountry] = useState(user.country);
+  const [oldPassword, setOldPassword] = useState('');
+  const [editedPassword, setEditedPassword] = useState('');
 
-  // Function to handle saving edited user information
-  const saveUserInfo = () => {
-    setUser({
-      ...user,
-      username: editedUsername,
-      age: editedAge,
-      country: editedCountry,
-    });
+  const handlePasswordReset = () => {
+    const user = auth.currentUser;
+
+    // verify old password
+    const credential = EmailAuthProvider.credential(user.email, oldPassword);
+    reauthenticateWithCredential(user, credential)
+      .then(() => {
+        // update with new password
+        updatePassword(user, editedPassword)
+          .then(() => {
+            alert('Sucessfully updated password!');
+          })
+          .catch((error) => {
+            // invalid if firebase checks password is insecure
+            alert(error);
+          });
+      })
+      .catch((error) => {
+        alert('Invalid password');
+      });
   };
 
-  // Function to handle button click and return a value
-  const handleButtonClick = (value) => {
-    // You can perform additional actions here if needed
-    console.log(`Button clicked: ${value}`);
+  const handleEmailReset = () => {
+    // update firebase email
+    const user = auth.currentUser;
+    // verify account
+    const credential = EmailAuthProvider.credential(user.email, oldPassword);
+
+    reauthenticateWithCredential(user, credential)
+      .then(() => {
+        // update with new email
+        updateEmail(user, editedEmail)
+          .then(() => {
+            // update user info in database
+            updateUserInfo(userID, 'email', editedEmail);
+            alert('Successfully updated email!');
+          })
+          .catch((error) => {
+            alert(error);
+          });
+      })
+      .catch((error) => {
+        alert(error);
+      });
   };
 
-  // Calculate the user's existence duration
+  const handleParticularUpdate = () => {
+    updateUserInfo(userID, 'username', editedUsername);
+    updateUserInfo(userID, 'age', editedAge);
+    updateUserInfo(userID, 'country', editedCountry);
+
+    if (editedEmail !== userInfo.email) {
+      handleEmailReset(editedEmail);
+    }
+  };
+
+  // calculate existence duration
   const calculateExistenceDuration = () => {
-    const registrationDate = new Date(user.registrationDate);
+    const registrationDate = new Date(userInfo.registration_date);
     const currentDate = new Date();
     const timeDifference = currentDate - registrationDate;
     const daysSinceRegistration = Math.floor(
@@ -53,80 +97,101 @@ function Profile() {
 
   return (
     <Container width="xm">
-      {/* Stylish Text */}
-      {/* <div className="stylish-text-container">
-        <p className="stylish-text">
-          Tell us more! We hope to provide you with more customized content.
-        </p>
-        <div className="snowflakes" aria-hidden="true">
-          <div className="snowflake">❅</div>
-          <div className="snowflake">❆</div>
-        </div>
-      </div> */}
-
-      {/* Profile Container */}
       <div className="profile-container">
-        <div className="profile-picture">
-          <img src={user.profileImageUrl} alt="Profile" />
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => handleButtonClick('Update Profile Icon')}
-            className="update-profile-button"
-          >
-            Update Profile Icon
-          </Button>
-        </div>
-        <div className="profile-details">
-          <div className="user-info">
-            <div className="profile-info-textfields">
+        <Stack direction="row" spacing={7} style={{ margin: 'auto' }}>
+          <AccountCircleIcon
+            style={{
+              width: '20vw',
+              height: '20vw', // Set a fixed height to maintain the aspect ratio
+              alignSelf: 'center',
+            }}
+          />
+          <Stack style={{ alignSelf: 'center', paddingRight: '30px' }}>
+            <Stack direction="row" spacing={5}>
               <TextField
                 id="filled-username"
                 label="Username"
-                variant="filled"
+                variant="outlined"
                 value={editedUsername}
+                error={editedUsername === ''}
+                helperText={editedUsername === '' ? 'Empty field!' : ' '}
                 onChange={(e) => setEditedUsername(e.target.value)}
+              />
+              <TextField
+                id="filled-email"
+                label="Email"
+                variant="outlined"
+                value={editedEmail}
+                error={editedEmail === ''}
+                helperText={editedEmail === '' ? 'Empty field!' : ' '}
+                onChange={(e) => setEditedEmail(e.target.value)}
+              />
+            </Stack>
+            <Stack direction="row" spacing={5}>
+              <TextField
+                id="filled-country"
+                label="Country"
+                variant="outlined"
+                error={editedCountry === ''}
+                helperText={editedCountry === '' ? 'Empty field!' : ' '}
+                value={editedCountry}
+                onChange={(e) => setEditedCountry(e.target.value)}
               />
               <TextField
                 id="filled-age"
                 label="Age"
-                variant="filled"
+                variant="outlined"
                 type="number"
                 value={editedAge}
+                error={editedAge === '' || editedAge <= 1}
+                helperText={
+                  editedAge === ''
+                    ? 'Empty field!'
+                    : editedAge <= 1
+                    ? 'Invalid age!'
+                    : ' '
+                }
                 onChange={(e) => setEditedAge(parseInt(e.target.value))}
               />
+            </Stack>
+            <Stack direction="row" spacing={5}>
               <TextField
-                id="filled-country"
-                label="Country"
-                variant="filled"
-                value={editedCountry}
-                onChange={(e) => setEditedCountry(e.target.value)}
+                id="filled-old-password"
+                label="Old Password"
+                variant="outlined"
+                placeholder="Enter current password"
+                value={oldPassword}
+                onChange={(e) => setOldPassword(e.target.value)}
               />
-            </div>
-          </div>
-          <div className="buttons-container">
-            <div className="update-particulars-button">
+              <TextField
+                id="filled-new-password"
+                label="New Password"
+                variant="outlined"
+                placeholder="Enter new password"
+                value={editedPassword}
+                onChange={(e) => setEditedPassword(e.target.value)}
+              />
+            </Stack>
+            <Stack direction="row" spacing={5} paddingTop={3.5}>
               <Button
                 variant="contained"
-                color="primary"
-                onClick={() => handleButtonClick('Update Particulars')}
+                color="secondary"
+                onClick={handleParticularUpdate}
                 className="update-particulars-button"
               >
                 Update Particulars
               </Button>
-            </div>
-            <div className="reset-password-button">
               <Button
                 variant="contained"
-                color="primary"
-                onClick={() => handleButtonClick('Reset Password')}
+                color="secondary"
+                onClick={handlePasswordReset}
                 className="reset-password-button"
               >
                 Reset Password
               </Button>
-            </div>
-          </div>
-        </div>
+            </Stack>
+          </Stack>
+        </Stack>
       </div>
       <div className="bottom-text">
         <p className="existence-duration">

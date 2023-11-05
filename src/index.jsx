@@ -8,6 +8,7 @@ import App from './App';
 import Explore from './components/explore/Explore';
 import Home from './components/home/Home';
 import Landing from './components/landing/Landing';
+import ForgetPassword from './components/login/ForgetPassword';
 import Login from './components/login/Login';
 import Nav from './components/nav/Nav';
 import Profile from './components/profile/Profile';
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: 'login/',
         element: <Login />,
+      },
+      {
+        path: 'reset/',
+        element: <ForgetPassword />,
       },
       {
         path: 'user/',
