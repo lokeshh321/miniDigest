@@ -1,4 +1,4 @@
-import { Container, Stack } from '@mui/material';
+import { Container, Divider, Grid, Stack } from '@mui/material';
 import React, { useContext } from 'react';
 
 import { UserContext } from '../../utils/UserContext';
@@ -11,21 +11,41 @@ export default function Explore() {
   const { userInfo } = useContext(UserContext);
 
   return (
-    <Container width="xm" style={{ marginTop: '1rem' }}>
-      {/* {Object.keys(userInfo).length !== 0 ? (
-        <PreferenceBar preferences={userInfo.preferences} />
-      ) : (
-        <div />
-      )} */}
+    <Container maxWidth="lg" style={{ marginTop: '1rem' }}>
       <Greeting />
-
-      <Stack direction="row" spacing={4}>
-        <ArticleVert />
-        <Stack direction="column" spacing={5}>
-          <FactOfTheDay />
-          <TodayInHistory />
-        </Stack>
-      </Stack>
+      <Grid container spacing={4}>
+        <Grid
+          item
+          xs={12}
+          md={8}
+          style={{
+            maxHeight: '100vh',
+            overflowY: 'auto',
+            marginRight: '2rem',
+            marginTop: '2rem',
+          }}
+        >
+          <Stack spacing={4}>
+            <ArticleVert />
+            <ArticleVert />
+          </Stack>
+        </Grid>
+        <Divider
+          orientation="vertical"
+          flexItem
+          style={{
+            marginLeft: '2rem',
+            backgroundColor: '#000000',
+            width: '2px',
+          }}
+        />
+        <Grid item xs={12} md={3}>
+          <Stack spacing={6}>
+            <FactOfTheDay />
+            <TodayInHistory />
+          </Stack>
+        </Grid>
+      </Grid>
     </Container>
   );
 }

@@ -28,11 +28,21 @@ export default function TrendingCard({ article }) {
               paddingTop={2}
               justifyContent="center"
             >
-              <Button href={article.url}>Visit Page</Button>
+              <Button
+                style={{
+                  backgroundColor: 'black',
+                  color: '#ffffff',
+                  borderColor: 'black',
+                }}
+                href={article.url}
+              >
+                Visit Page
+              </Button>
               <Button
                 style={{
                   backgroundColor: 'white',
-                  color: '#0D6EFD',
+                  color: '#000000',
+                  borderColor: 'black',
                 }}
                 onClick={() => {
                   navigator.clipboard.writeText(article.url);
