@@ -56,6 +56,7 @@ function Landing() {
             to="/signup"
             variant="contained"
             disableElevation
+            color="secondary"
           >
             Sign Up
           </Button>
@@ -64,6 +65,7 @@ function Landing() {
             to="/login"
             variant="outlined"
             disableElevation
+            color="secondary"
           >
             Login
           </Button>

@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 
 export default function TrendingCard({ article }) {
   return (
-    <Card sx={{ marginY: 2, marginX: 4 }} variant="outlined">
+    <Card sx={{ marginY: 2, marginX: 4, borderRadius: 4 }} variant="outlined">
       <Stack direction="row" paddingBottom={2}>
         <Box padding={4} alignSelf="center">
           <Stack>
@@ -14,7 +14,7 @@ export default function TrendingCard({ article }) {
               src={article.urlToImage}
               alt="filler"
               style={{
-                width: '30vw',
+                width: '35vw',
                 height: '25vw', // Set a fixed height to maintain the aspect ratio
                 objectFit: 'cover', // Use 'cover' to fill the container
                 borderRadius: 10,
@@ -35,6 +35,8 @@ export default function TrendingCard({ article }) {
                   borderColor: 'black',
                 }}
                 href={article.url}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 Visit Page
               </Button>

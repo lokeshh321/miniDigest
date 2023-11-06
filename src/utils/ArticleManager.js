@@ -113,3 +113,17 @@ export async function fetchTrendingArticles(numToSummarise) {
     return [];
   }
 }
+
+export async function fetchArticleByCategory(category, numOfArticles) {
+  const allocatedPref = {
+    [category]: numOfArticles,
+  };
+
+  try {
+    const fetchedArticles = await fetchAllArticles(allocatedPref);
+    return fetchedArticles;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
