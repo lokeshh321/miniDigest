@@ -2,7 +2,7 @@ import { Card, Skeleton, Typography } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react';
 import { Stack } from 'react-bootstrap';
 
-import streamSummaryResponse from '../../utils/LLMQuerier';
+import { streamSummaryResponse } from '../../utils/LLMQuerier';
 import { getCachedSummary } from '../../utils/LocalStorageManager';
 import { UserContext } from '../../utils/UserContext';
 
@@ -54,15 +54,3 @@ export default function SummarySection({ userInfo }) {
     </Card>
   );
 }
-
-// SummarySection.propTypes = {
-//   preferences: PropTypes.shape({
-//     all: PropTypes.bool,
-//     tech: PropTypes.bool,
-//     science: PropTypes.bool,
-//     sports: PropTypes.bool,
-//     business: PropTypes.bool,
-//     health: PropTypes.bool,
-//     entertainment: PropTypes.bool,
-//   }).isRequired,
-// };

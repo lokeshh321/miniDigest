@@ -1,7 +1,11 @@
 import OpenAIApi from 'openai';
 
 import { cacheSummary } from './LocalStorageManager';
-import generateSummarisePrompt from './PromptGenerator';
+import {
+  generateFOTDPrompt,
+  generateSummarisePrompt,
+  generateTodayHistoryPrompt,
+} from './PromptGenerator';
 
 const API_KEY = import.meta.env.VITE_OPENAI_KEY;
 
@@ -10,7 +14,7 @@ const openai = new OpenAIApi({
   dangerouslyAllowBrowser: true,
 });
 
-export default async function streamSummaryResponse(
+export async function streamSummaryResponse(
   userInfo,
   setResponseMsg,
   controller
@@ -36,4 +40,24 @@ export default async function streamSummaryResponse(
       cacheSummary(currentMsg);
     }
   }
+}
+
+async function queryWithPrompt(prompt) {
+  const completion = await openai.chat.completions.create({
+    model: 'gpt-3.5-turbo',
+    messages: prompt,
+  });
+
+  const response = completion.choices[0].message.content;
+  return response;
+}
+
+export async function getFactOfTheDay() {
+  const fotdPrompt = generateFOTDPrompt();
+  return queryWithPrompt(fotdPrompt);
+}
+
+export async function getTodayInHistory() {
+  const historyTodayPrompt = generateTodayHistoryPrompt();
+  return queryWithPrompt(historyTodayPrompt);
 }

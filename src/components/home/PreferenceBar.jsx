@@ -5,7 +5,7 @@ import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { UserContext } from '../../utils/UserContext';
 import { syncUserPreferences } from '../../utils/UserManager';
 
-export default function HomePreferenceBar({ preferences }) {
+export default function PreferenceBar({ preferences }) {
   const { userID, setRenderUpdate } = useContext(UserContext);
   const [allButtonState, setAllStates] = useState(preferences.all);
 
@@ -17,23 +17,6 @@ export default function HomePreferenceBar({ preferences }) {
     Health: preferences.health,
     Entertainment: preferences.entertainment,
   });
-
-  useEffect(() => {
-    // if user deselects all categories, automatically select "all"
-    if (Object.values(buttonStates).every((value) => value === false)) {
-      setAllStates(true);
-    }
-  }, [buttonStates, allButtonState]);
-
-  const handleButtonChange = () => {
-    // post changes to firebase
-    syncUserPreferences(userID, buttonStates, allButtonState);
-  };
-
-  useMemo(() => {
-    handleButtonChange();
-    setRenderUpdate(true);
-  }, [buttonStates, allButtonState]);
 
   const toggleAll = () => {
     setAllStates(!allButtonState);
@@ -50,6 +33,27 @@ export default function HomePreferenceBar({ preferences }) {
       }));
     }
   };
+
+  useEffect(() => {
+    // if user deselects all categories, automatically select "all"
+    if (Object.values(buttonStates).every((value) => value === false)) {
+      setAllStates(true);
+    }
+
+    if (Object.values(buttonStates).every((value) => value === true)) {
+      toggleAll();
+    }
+  }, [buttonStates, allButtonState]);
+
+  const handleButtonChange = () => {
+    // post changes to firebase
+    syncUserPreferences(userID, buttonStates, allButtonState);
+  };
+
+  useMemo(() => {
+    handleButtonChange();
+    setRenderUpdate(true);
+  }, [buttonStates, allButtonState]);
 
   const toggleButton = (buttonName) => {
     setButtonStates((prevState) => ({
@@ -102,7 +106,7 @@ export default function HomePreferenceBar({ preferences }) {
           style={{
             paddingTop: '0.4rem',
             paddingBottom: '2rem',
-            marginRight: '1.5rem',
+            marginLeft: '1.2rem',
             minHeight: 'inherit',
             color: 'red',
           }}
@@ -138,7 +142,7 @@ export default function HomePreferenceBar({ preferences }) {
   );
 }
 
-HomePreferenceBar.propTypes = {
+PreferenceBar.propTypes = {
   preferences: PropTypes.shape({
     all: PropTypes.bool,
     tech: PropTypes.bool,

@@ -20,6 +20,11 @@ function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
+    if (data.get('password') !== data.get('repassword')) {
+      alert('Passwords do not match!');
+      return;
+    }
+
     createUserWithEmailAndPassword(
       auth,
       data.get('email'),
@@ -112,21 +117,22 @@ function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="reemail"
-                  label="Re-enter Email Address"
-                  name="reemail"
-                  autoComplete="reemail"
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="new-password"
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  name="password"
-                  label="Password"
+                  name="repassword"
+                  label="Re-enter Password"
                   type="password"
-                  id="password"
-                  autoComplete="new-password"
+                  id="repassword"
+                  autoComplete="repassword"
                 />
               </Grid>
             </Grid>

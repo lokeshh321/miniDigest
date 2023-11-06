@@ -1,5 +1,5 @@
 import { Stack, Typography } from '@mui/material';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 
 import { UserContext } from '../../utils/UserContext';
 
@@ -8,25 +8,32 @@ export default function Greeting() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [greeting, setGreeting] = useState('');
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const newDate = new Date();
-      setCurrentDate(newDate);
+  function streamGreeting(newGreeting) {
+    for (let i = 0; i < newGreeting.length; i += 1) {
+      setTimeout(() => {
+        setGreeting((prevGreeting) => prevGreeting + newGreeting[i]);
+      }, i * 50); // Delay each character by i seconds
+    }
+  }
 
-      const hour = newDate.getHours();
-      let newGreeting;
-      if (hour >= 6 && hour < 12) {
-        newGreeting = 'Good Morning';
-      } else if (hour >= 12 && hour < 18) {
-        newGreeting = 'Good Afternoon';
-      } else {
-        newGreeting = 'Good Evening';
-      }
-      setGreeting(newGreeting);
-    }, 1000); // Update every second
+  useMemo(() => {
+    const newDate = new Date();
+    setCurrentDate(newDate);
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []);
+    const hour = newDate.getHours();
+    let newGreeting;
+    if (hour >= 6 && hour < 12) {
+      newGreeting = 'Good Morning';
+    } else if (hour >= 12 && hour < 18) {
+      newGreeting = 'Good Afternoon';
+    } else {
+      newGreeting = 'Good Evening';
+    }
+
+    if (greeting === '') {
+      streamGreeting(`${newGreeting}, ${userInfo.username}`);
+    }
+  }, [userInfo]);
 
   return (
     <Stack
@@ -34,9 +41,7 @@ export default function Greeting() {
       justifyContent="space-between"
       sx={{ paddingBottom: 3, paddingTop: 2 }}
     >
-      <Typography sx={{ fontSize: '25px' }}>
-        {greeting}, {userInfo.username}
-      </Typography>
+      <Typography sx={{ fontSize: '25px' }}>{greeting}</Typography>
       <Typography variant="body1">
         {currentDate.toLocaleDateString(undefined, {
           day: 'numeric',

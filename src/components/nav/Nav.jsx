@@ -11,10 +11,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { signOut } from 'firebase/auth';
-import React from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { auth } from '../../configs/firebase';
+import { UserContext } from '../../utils/UserContext';
 
 const pages = [
   {
@@ -32,6 +33,15 @@ const pages = [
 ];
 
 export default function Nav() {
+  const { userInfo } = useContext(UserContext);
+  const [userIcon, setUserIcon] = useState('');
+
+  useMemo(() => {
+    if (userInfo && userInfo.username && userInfo.username[0]) {
+      setUserIcon(userInfo.username[0]);
+    }
+  }, [userInfo]);
+
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -66,7 +76,6 @@ export default function Nav() {
 
   return (
     <AppBar
-      // color="transparent"
       position="static"
       sx={{
         boxShadow: 'none',
@@ -199,7 +208,7 @@ export default function Nav() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar sx={{ width: 56, height: 56 }}>R</Avatar>
+                <Avatar sx={{ width: 56, height: 56 }}>{userIcon}</Avatar>
               </IconButton>
             </Tooltip>
             <Menu
