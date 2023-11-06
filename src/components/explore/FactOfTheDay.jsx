@@ -12,21 +12,21 @@ export default function OutlinedCard() {
         variant="outlined"
         sx={{
           borderRadius: 5,
-          backgroundColor: '#F7EEE7',
-          boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.5)', // subtle shadow
+          backgroundColor: '#Ffffff',
+          boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.5)',
           border: '1px solid rgba(0, 0, 0, 0.25)',
         }}
       >
         <CardContent>
           <Typography
             sx={{
-              fontSize: 22,
+              fontSize: 20,
               marginBottom: 1,
               display: 'flex',
               alignItems: 'center',
               fontWeight: 'bold',
             }}
-            color="secondary"
+            color="#000000"
             gutterBottom
           >
             Fact of the Day
@@ -34,7 +34,11 @@ export default function OutlinedCard() {
           <EmojiObjectsOutlinedIcon
             sx={{ marginRight: 1, fontSize: '1.8rem' }}
           />
-          <Typography variant="h6" component="span" sx={{ marginBottom: 5 }}>
+          <Typography
+            variant="subtitle2"
+            component="span"
+            sx={{ marginBottom: 5 }}
+          >
             The real name of a hashtag is an octothorpe.
           </Typography>
         </CardContent>
