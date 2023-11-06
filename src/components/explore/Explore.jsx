@@ -20,8 +20,9 @@ export default function Explore() {
           md={8}
           style={{
             maxHeight: '100vh',
-            overflowY: 'scroll',
+            overflowY: 'auto',
             marginRight: '2rem',
+            marginTop: '2rem',
           }}
         >
           <Stack spacing={4}>
