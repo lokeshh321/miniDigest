@@ -10,7 +10,7 @@ function Trending() {
       <Container width="xm" style={{ marginTop: '1rem' }}>
         <Greeting />
       </Container>
-      <div style={{ marginLeft: '8vw', marginRight: '8vw' }}>
+      <div>
         <TrendingSection />
       </div>
     </main>

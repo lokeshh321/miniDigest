@@ -12,10 +12,10 @@ function SectionTitle({ title }) {
         flexItem
         sx={{
           backgroundColor: '#000000',
-          marginBottom: 0.8,
+          marginBottom: 0.6,
           marginTop: 1.5,
           marginRight: 20,
-          padding: 0.1,
+          padding: 0.08,
         }}
       />
       <Divider
@@ -23,7 +23,7 @@ function SectionTitle({ title }) {
         sx={{
           backgroundColor: 'black',
           marginBottom: 3,
-          padding: 0.1,
+          padding: 0.08,
         }}
       />
     </Stack>
