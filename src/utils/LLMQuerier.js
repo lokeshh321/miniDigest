@@ -8,6 +8,7 @@ import {
 } from './PromptGenerator';
 
 const API_KEY = import.meta.env.VITE_OPENAI_KEY;
+const MODEL = 'gpt-4-1106-preview';
 
 const openai = new OpenAIApi({
   apiKey: API_KEY,
@@ -25,7 +26,7 @@ export async function streamSummaryResponse(
 
   const completion = await openai.chat.completions.create(
     {
-      model: 'gpt-3.5-turbo',
+      model: MODEL,
       messages: prompt,
       stream: true,
     },
@@ -44,7 +45,7 @@ export async function streamSummaryResponse(
 
 async function queryWithPrompt(prompt) {
   const completion = await openai.chat.completions.create({
-    model: 'gpt-3.5-turbo',
+    model: MODEL,
     messages: prompt,
   });
 
