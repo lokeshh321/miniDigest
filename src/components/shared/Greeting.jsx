@@ -1,5 +1,5 @@
 import { Stack, Typography } from '@mui/material';
-import React, { useContext, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 
 import { UserContext } from '../../utils/UserContext';
 
@@ -12,14 +12,20 @@ export default function Greeting() {
     for (let i = 0; i < newGreeting.length; i += 1) {
       setTimeout(() => {
         setGreeting((prevGreeting) => prevGreeting + newGreeting[i]);
-      }, i * 50); // Delay each character by i seconds
+      }, i * 50); // delay render of character
     }
   }
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDate(new Date());
+    }, 1000); // update clock
+
+    return () => clearInterval(interval);
+  }, []);
+
   useMemo(() => {
     const newDate = new Date();
-    setCurrentDate(newDate);
-
     const hour = newDate.getHours();
     let newGreeting;
     if (hour >= 6 && hour < 12) {
@@ -33,7 +39,7 @@ export default function Greeting() {
     if (greeting === '') {
       streamGreeting(`${newGreeting}, ${userInfo.username}`);
     }
-  }, [userInfo]);
+  }, [userInfo, greeting]);
 
   return (
     <Stack
