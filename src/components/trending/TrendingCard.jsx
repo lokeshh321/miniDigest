@@ -7,7 +7,11 @@ import { Button } from 'react-bootstrap';
 export default function TrendingCard({ article }) {
   return (
     <Card sx={{ marginY: 2, marginX: 4, borderRadius: 4 }} variant="outlined">
-      <Stack direction="row" paddingBottom={2}>
+      <Stack
+        sx={{ flexDirection: { xs: 'column', lg: 'row' } }}
+        paddingBottom={2}
+        flexWrap
+      >
         <Box padding={4} alignSelf="center">
           <Stack>
             <img
