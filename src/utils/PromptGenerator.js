@@ -12,7 +12,8 @@ export async function generateSummarisePrompt(userInfo) {
         role: 'system',
         content: `You will act as a news summariser. You must follow the following style of writing: "${stylisePrompt}".
         If no style is given, write a continuous paragraph in a concise and coherent manner that is easy to understand. 
-        Make your summary short and clear, keeping to a maximum of 200 words. 
+        Make your summary short and clear, keeping to a maximum of 200 words. Strictly DO NOT write in markdown.
+        Do not write in point form unless otherwise specified by writing style.
         Tailor it to a ${userAge} year old user unless otherwise specified by the writing style.
         Summarise the following articles given in JSON format: ${articleJSON}`,
       },

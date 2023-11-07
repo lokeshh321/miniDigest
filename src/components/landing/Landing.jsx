@@ -9,7 +9,7 @@ function Landing() {
     <Container disableGutters maxWidth={false} overflowX="hidden">
       <Box
         sx={{
-          backgroundImage: 'url(assets/background.png)',
+          backgroundImage: "url('assets/background.png')",
           backgroundPosition: 'center',
           margin: 'auto',
           width: '100%',
