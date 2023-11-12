@@ -1,0 +1,12 @@
+######## GITHUB REPOSITORY LINK ########
+
+https://github.com/softwarelab3/2006-SCSY-MotleyCrew.git
+
+######## LIVE DEMO LINK ########
+
+https://summarise.vercel.app
+
+######## YOUTUBE VIDEO LINK #######
+
+https://www.youtube.com/watch?v=7vsAtURHtM4
+
