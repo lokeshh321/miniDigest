@@ -2,4 +2,4 @@
 
 A web application that delivers concise, summarised news tailor-made to each user based on Open AI's LLMs and NewsAPI.
 
-Link: [Mini Digest](summarise.vercel.app)
+[View app](summarise.vercel.app)
